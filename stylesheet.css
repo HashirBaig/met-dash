@@ -1,0 +1,410 @@
+#app_header{
+    width: 100%;
+    margin-top: -10px;
+    text-align: center;
+    font-size: 39px;
+}
+
+
+/*CSS for metric dashboard*/
+#metric-right-panel{
+    float: left;
+    margin-top: -40px;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s ease;
+}
+
+.metric-stats{
+    float: left;
+    text-align: center;
+    width: 14%;
+    height: 14%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 21px;
+}
+#metric-mom{
+    font-style: italic;
+}
+#metric-stats{
+    margin-left: 9%;
+}
+
+.metric-graph{
+    margin-top: -15px;
+    height: 40%;
+    width: 40%;
+    transition: all 0.8s ease;
+}
+#metric-occ-graph{
+    float: right;
+    margin-top: -266px;
+    margin-right: 160px;
+    transition: all 0.8s ease;
+}
+#metric-rev-par-graph{
+    margin-left: 70px;
+    transition: all 0.8s ease;
+}
+
+#metric-rev-resp-canvas{
+    height: 500px !important; 
+    width: 80% !important;
+    margin-left: 99px;
+    transition: all 0.8s ease;
+}
+
+/*CSS for Stats bar*/
+.val-adr{
+    float: left;
+    margin-top: -42px;
+    margin-left: 70px;
+}
+.val-revpar{
+    float: left;
+    margin-top: -42px;
+    margin-left: 70px;
+}
+.val-occ{
+    float: left;
+    margin-top: -42px;
+    margin-left: 70px;
+}
+.val-avail{
+    float: left;
+    margin-top: -42px;
+    margin-left: 70px;
+}
+.val-rating{
+    float: left;
+    margin-top: -42px;
+    margin-left: 70px;
+}
+
+/*--------Making triangles for stats--------*/
+
+/*Adr up and down triangles*/
+.triangle-adr-up{
+    width: 0;
+    height: 0;
+    border-left: 9px solid;
+    border-right: 9px solid;
+    border-bottom: 18px solid;
+    margin-left: 41px;
+}
+.triangle-adr-down{
+    width: 0;
+    height: 0;
+    border-left: 9px solid;
+    border-right: 9px solid;
+    border-top: 18px solid;
+    margin-left: 41px;
+}
+
+/*Revpar up and down triangles*/
+.triangle-revpar-up{
+    width: 0;
+    height: 0;
+    border-left: 9px solid;
+    border-right: 9px solid;
+    border-bottom: 18px solid;
+    margin-left: 41px;
+}
+.triangle-revpar-down{
+    width: 0;
+    height: 0;
+    border-left: 9px solid;
+    border-right: 9px solid;
+    border-top: 18px solid;
+    margin-left: 41px;
+}
+
+/*Occ up and down triangles*/
+.triangle-occ-up{
+    width: 0;
+    height: 0;
+    border-left: 9px solid;
+    border-right: 9px solid;
+    border-bottom: 18px solid;
+    margin-left: 41px;
+}
+.triangle-occ-down{
+    width: 0;
+    height: 0;
+    border-left: 9px solid;
+    border-right: 9px solid;
+    border-top: 18px solid;
+    margin-left: 41px;
+}
+
+/*Rating up and down triangles*/
+.triangle-rating-up{
+    width: 0;
+    height: 0;
+    border-left: 9px solid;
+    border-right: 9px solid;
+    border-bottom: 18px solid;
+    margin-left: 41px;
+}
+.triangle-rating-down{
+    width: 0;
+    height: 0;
+    border-left: 9px solid;
+    border-right: 9px solid;
+    border-top: 18px solid;
+    margin-left: 41px;
+}
+
+/*Avail up and down triangles*/
+.triangle-avail-up{
+    width: 0;
+    height: 0;
+    border-left: 9px solid;
+    border-right: 9px solid;
+    border-bottom: 18px solid;
+    margin-left: 41px;
+}
+.triangle-avail-down{
+    width: 0;
+    height: 0;
+    border-left: 9px solid;
+    border-right: 9px solid;
+    border-top: 18px solid;
+    margin-left: 41px;
+}
+
+/*Side Menue Bar*/
+.sidebar *{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.sidebar{
+    /*z-index: 1110;*/
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #042331;
+    transition: all 0.4s ease;
+}
+.sidebar header{
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 70px;
+    background: #063146;
+    user-select: none;
+}
+.sidebar ul button{
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 60px;
+    font-size: 20px;
+    padding-left: 20px;
+    color: white;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid black;
+    border-left-color: #042331;
+    background-color: #042331;
+    text-align: left;
+    transition: .4s;
+}
+ul li:hover button{
+    padding-left: 23px;
+}
+.sidebar ul button i{
+    margin-right: 10px;
+}
+#check{
+    display: none;
+}
+label #btn, label #cancel{
+    position: absolute;
+    cursor: pointer;
+    background-color: #042331;
+    border-radius: 3px;
+}
+label #btn{
+    left: 40px;
+    top: 25px;
+    font-size: 35px;
+    color: white;
+    padding: 3px 6px;
+    transition: 0.3s;
+}
+label #cancel{
+    z-index: 1111;
+    position: fixed;
+    left: -195px;
+    top: 14px;
+    font-size: 35px;
+    color: white;
+    padding: 3px 6px;
+    transition: all 0.4s ease;
+}
+#metric-container{
+    transition: all 0.4s ease;
+}
+.graph-title{
+    margin-left: 460px;
+    font-size: 30px;
+}
+.rev-resp-graph-title{
+    margin-left: 380px;
+    font-size: 30px;
+}
+#check:checked ~ .sidebar{
+    left: 0;
+}
+#check:checked ~ label #btn{
+    left: 250;
+    opacity: 0;
+    pointer-events: none;
+}
+#check:checked ~ label #cancel{
+    left: 195px;
+}
+
+#check:checked ~ #metric-container{
+    margin-left: 200px;
+}
+
+#check:checked ~ #metric-right-panel{
+    margin-left: 200px;
+}
+
+#check:checked ~ #metric-rev-par-graph {
+    margin-left: 540px;
+    margin-top: 170px;
+    transform: scale(1.4);
+    align-items: center;
+}
+
+#check:checked ~ #metric-occ-graph{
+    margin-right: 250px;
+    margin-top: 190px;
+    transform: scale(1.4);
+    float: right;
+    display: flex;
+}
+
+#check:checked ~ #metric-hotel-resp-graph {
+    margin-left: 290px;
+    margin-top: 600px;
+    transform: scaleX(1.2);
+    align-items: center;
+}
+#check:checked ~ .graph-title {
+    text-align: center;
+    font-size: 39px;
+}
+#check:checked ~ #rev-par-container {
+    margin-left: 140px;
+    transform: scaleX(0.8);
+}
+#check:checked ~ #rev-resp-container {
+    margin-left: 140px;
+    transform: scaleX(0.8);
+}
+#check:checked ~ #occ-container {
+    margin-left: 140px;
+    transform: scaleX(0.8);
+}
+
+#rev-par-container, #rev-resp-container, #occ-container{
+    display: none;
+}
+
+/*CSS for rev-par-graph*/
+#rev-par-container{
+    height: 100%;
+    width: 100%;
+    transition: all 0.4s ease;
+}
+#rev-par-graph{
+    float: left;
+    height: 60%;
+    width: 85%;
+}
+#revpar-canvas{
+    height: 500px !important;
+    width: 1100px !important;
+}
+#rev-par-control-panel{
+    float: left;
+    height: 100%;
+    width: 15%;
+    margin-left: -35px;
+}
+#rev-par-date{
+    color: #f6931f;
+    font-weight: bold;
+}
+/*CSS for checkboxes in control panel of revpar graph*/
+.revpar-label{
+    color: gray;
+}
+.rev-resp-label{
+    color: gray;
+}
+.occ-label{
+    color: gray;
+}
+
+/*CSS for occ-graph*/
+#occ-container{
+    height: 100%;
+    width: 100%;
+    transition: all 0.4s ease;
+}
+#occ-graph{
+    float: left;
+    height: 60%;
+    width: 85%;
+}
+#occ-canvas{
+    height: 500px !important;
+    width: 1100px !important;
+}
+#occ-control-panel{
+    float: left;
+    height: 100%;
+    width: 15%;
+    margin-left: -35px;
+}
+#occ-date{
+    color: #f6931f;
+    font-weight: bold;
+}
+
+/*CSS for rev-resp-graph*/
+#rev-resp-container{
+    height: 100%;
+    width: 100%;
+    transition: all 0.4s ease;
+}
+#rev-resp-graph{
+    float: left;
+    height: 60%;
+    width: 85%;
+}
+#rev-resp-canvas{
+    height: 500px !important;
+    width: 1100px !important;
+}
+#rev-resp-control-panel{
+    float: left;
+    height: 100%;
+    width: 15%;
+    margin-left: -35px;
+}
+#rev-resp-date{
+    color: #f6931f;
+    font-weight: bold;
+}

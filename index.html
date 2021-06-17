@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+		  src="https://code.jquery.com/jquery-3.6.0.js"
+		  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+		  crossorigin="anonymous">
+  	</script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.bundle.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    
+
+    <link rel="stylesheet" href="stylesheet.css"/>
+    <title>Metric Dashboard</title>
+</head>
+
+<body>
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-arrow-circle-left" id="cancel"></i>
+    </label>
+
+    <div class="sidebar">
+        <header>HotelDash</header>
+
+        <ul class="nav-btn-list">
+            <li><button id="metric-btn"           onclick="containerOneVisible('metric-container', 'metric-right-panel', 'metric-rev-par-graph', 'metric-occ-graph', 'metric-rev-resp-graph','id')"> <i class="fas fa-qrcode"> </i>  Metrics </button></li>
+            <li><button id="revpar-v-rev-btn"     onclick="visibleElement('rev-par-container','id')">  <i class="fas fa-chart-line"></i>  RevPar v Rev     </button></li>
+            <li><button id="rev-v-hotel-resp-btn" onclick="visibleElement('rev-resp-container','id')"> <i class="fas fa-hotel">     </i>  Rev v Hotel Resp </button></li>
+            <li><button id="occ-v-avail-btn"      onclick="visibleElement('occ-container','id')">      <i class="fas fa-bed">       </i>  Occ % v Avail    </button></li>
+        </ul>
+
+    </div>
+    <!--Container 1-->
+    <div id="metric-container">
+        <h1 id="app_header">Metric Dashboard</h1>
+    </div>
+    
+    <!--Metric Right Panel-->
+    <div id="metric-right-panel">
+
+        <!--Metric Statictis-->
+        <div id="metric-stats">
+            
+            <!--MoM-->
+            <div id="metric-mom" class="metric-stats">
+                <p>Latest Month over Month (MoM)</p>
+            </div>
+
+            <!--ADR-->
+            <div id="metric-adr" class="metric-stats">
+                <p>ADR</p>
+                <div id="stats-adr">
+                    
+                    <div class="triangle-adr-up"></div>
+                    <div class="triangle-adr-down"></div>
+
+                    <div class="val-adr">
+                        <p id="adr-val"></p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--RevPar-->
+            <div id="metric-revpar" class="metric-stats">
+                <p>RevPar</p>
+                <div id="stats-revpar">
+                    
+                    <div class="triangle-revpar-up"> </div>
+                    <div class="triangle-revpar-down"> </div>
+
+                    <div class="val-revpar">
+                        <p id="revpar-val"></p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--Occupancy %-->
+            <div id="metric-occ" class="metric-stats">
+                <p>Occ %</p>
+                <div id="stats-occ">
+                    <div class="triangle-occ-up"></div>
+                    <div class="triangle-occ-down"></div>
+
+                    <div class="val-occ">
+                        <p id="occ-val"></p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Room Availability-->
+            <div id="metric-avail" class="metric-stats">
+                <p>Avail %</p>
+                <div id="stats-avail">
+                    
+                    <div class="triangle-avail-up"></div>
+                    <div class="triangle-avail-down"></div>
+
+                    <div class="val-avail">
+                        <p id="avail-val"></p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Rating-->
+            <div id="metric-rating" class="metric-stats">
+                <p>Rating</p>
+                <div id="stats-rating">
+                    
+                    <div class="triangle-rating-up"></div>
+                    <div class="triangle-rating-down"></div>
+                    
+                    <div class="val-rating">
+                        <p id="rating-val"></p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <!--Metric Graphs-->
+    
+    <!--Rev Par Graph-->
+    <div id="metric-rev-par-graph" class="metric-graph">
+        <canvas id="metric-revpar-canvas"></canvas>
+    </div>
+
+    <!--Occ % Graph-->
+    <div id="metric-occ-graph" class="metric-graph">
+        <canvas id="occ-metric-canvas"></canvas>
+    </div>
+    
+    <!--Rev Hotel Resp Graph-->
+    <div id="metric-hotel-resp-graph">
+        <canvas id="metric-rev-resp-canvas"></canvas>
+    </div>
+
+
+    <!--Container 2-->
+    <div id="rev-par-container">
+        <h2 class="graph-title">RevPar v Rev</h2>
+                        
+        <!--Graph div-->
+        <div id="rev-par-graph">
+            <canvas id="revpar-canvas"></canvas>
+        </div>
+            
+        <!--Control Panel-->
+        <div id="rev-par-control-panel">
+            
+            <label>Id</label> <br>
+            <input type="checkbox" id="revpar-all-pid" value="*">
+            <label id="revpar-all-label" for="revpar-all-pid" class="revpar-label">(All)</label> <br>
+
+            <input type="checkbox" id="revpar-pid-1" value="1">
+            <label id="revpar-p1-label" class="revpar-label">1</label> <br>
+
+            <input type="checkbox" id="revpar-pid-2" value="2">
+            <label id="revpar-p2-label" class="revpar-label">2</label> <br>
+
+            <p>
+                <label for="amount">Date (Drag to customize view)</label> <br>
+                <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+            </p>
+            <p id="rev-par-date"></p>
+            <div id="rev-par-slider-range"></div>
+        </div>
+    </div>
+    <!--Container 3-->
+    <div id="rev-resp-container">
+        <h2 class="rev-resp-graph-title">Review vs Hotel Response</h2>
+        
+        <!--Graph div-->
+        <div id="rev-resp-graph">
+            <canvas id="rev-resp-canvas"></canvas>
+        </div>
+            
+        <!--Control Panel-->  
+        <div id="rev-resp-control-panel">
+
+            <label>Id</label> <br>
+            <input type="checkbox" id="rev-resp-all-pid" value="*">
+            <label id="rev-resp-all-label" for="rev-resp-all-pid" class="rev-resp-label">(All)</label> <br>
+
+            <input type="checkbox" id="rev-resp-pid-1" value="1">
+            <label id="rev-resp-p1-label" for="revpar-pid-1" class="rev-resp-label">1</label> <br>
+
+            <input type="checkbox" id="rev-resp-pid-2" value="2">
+            <label id="rev-resp-p2-label" for="revpar-pid-2" class="rev-resp-label">2</label> <br>
+        
+            <p>
+              <label for="rev-resp-amount">Date (Drag to customize view)</label> <br>
+              <input type="text" id="rev-resp-amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+            </p>
+
+            <p id="rev-resp-date"></p>
+            <div id="rev-resp-slider-range"></div>
+        </div>
+        
+    </div>
+    <!--Container 4-->
+    <div id="occ-container">
+        <h2 class="graph-title">Occ% v Avail</h2>
+        
+        <!--Graph div-->
+        <div id="occ-graph">
+            <canvas id="occ-canvas"></canvas>
+        </div>
+
+        <!--Control Panel-->
+        <div id="occ-control-panel">
+
+            <label>Id</label> <br>
+            <input type="checkbox" id="occ-all-pid" value="*">
+            <label id="occ-all-label" for="occ-all-pid" class="occ-label">(All)</label> <br>
+
+            <input type="checkbox" id="occ-pid-1" value="1">
+            <label id="occ-p1-label" for="occ-pid-1" class="occ-label">1</label> <br>
+
+            <input type="checkbox" id="occ-pid-2" value="2">
+            <label id="occ-p2-label" for="occ-pid-2" class="occ-label">2</label> <br>
+
+            <p>
+                <label for="occ-amount">Date (Drag to customize view)</label> <br>
+                <input type="text" id="occ-amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+            </p>
+            <p id="occ-date"></p>
+            <div id="occ-slider-range"></div>
+        </div>
+
+    </div>
+
+    <p id="app-data"></p>
+
+    <script src="index.js"></script>
+    <script src="nav.js"></script>
+    
+</body>
+</html>
