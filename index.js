@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 //Making API calls
 function availMetricApiCall(){
-    fetch('http://localhost:5000/getAvailMetric')
+    fetch('https://adevu-metric-dashboard.herokuapp.com/getAvailMetric')
     .then(response => response.json())
     .then(data => loadAvailMetricData(data));
 }
@@ -130,7 +130,7 @@ function loadAvailMetricData(data) {
 
 
 function ratingMetricApiCall(){
-    fetch('http://localhost:5000/getRatingMetric')
+    fetch('https://adevu-metric-dashboard.herokuapp.com/getRatingMetric')
     .then(response => response.json())
     .then(data => loadRatingMetricData(data));
 }
@@ -213,7 +213,7 @@ function loadRatingMetricData(data) {
 
 
 function metricApiCall(){
-    fetch('http://localhost:5000/getMetrics')
+    fetch('https://adevu-metric-dashboard.herokuapp.com/getMetrics')
     .then(response => response.json())
     .then(data => loadMetricData(data));
 }
@@ -379,7 +379,7 @@ function loadMetricData(data) {
 
 //Occ % Metric
 function occMetricApiCall(){
-    fetch('http://localhost:5000/getOccMetric')
+    fetch('https://adevu-metric-dashboard.herokuapp.com/getOccMetric')
     .then(response => response.json())
     .then(data => loadOccMetric(data));
 }
@@ -471,7 +471,7 @@ function loadOccMetric(data) {
 
 
 function occAvailAPICall() {
-    fetch('http://localhost:5000/getOccAvail')
+    fetch('https://adevu-metric-dashboard.herokuapp.com/getOccAvail')
     .then(response => response.json())
     .then(data => loadOccAvailData(data));
 }
@@ -1066,7 +1066,7 @@ function occVAvailGraph_Metric(occ,mon,avail) {
 
 
 function revHotelRespAPICall() {
-    fetch('http://localhost:5000/getRevResp')
+    fetch('https://adevu-metric-dashboard.herokuapp.com/getRevResp')
     .then(response => response.json())
     .then(data => loadRevHotelRespData(data));
 }
@@ -1766,7 +1766,7 @@ function revHotelRespGraph_Metric(rev_score,mon,resp_bool) {
 
 
 function revParAPICall() {
-    fetch('http://localhost:5000/getRevPar')
+    fetch('https://adevu-metric-dashboard.herokuapp.com/getRevPar')
     .then(response => response.json())
     .then(data => loadRevParData(data));
 }
