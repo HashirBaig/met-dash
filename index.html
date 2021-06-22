@@ -128,8 +128,63 @@
 
     </div>
 
-    <!--Metric Graphs-->
+    <!--Property Filter - Rev & Occ - Main Dashboard-->
+    <div id="rev-occ-pid-filter">
+            
+        <label>Id</label> <br>
+        <input type="checkbox" id="rev-occ-main-all-pid" value="*">
+        <label id="rev-occ-main-all-label" for="rev-occ-main-all-pid" class="rev-occ-main-label">(All)</label> <br>
+
+        <input type="checkbox" id="rev-occ-main-pid-1" value="1">
+        <label id="rev-occ-main-p1-label" for="rev-occ-main-pid-1" class="rev-occ-main-label">1</label> <br>
+
+        <input type="checkbox" id="rev-occ-main-pid-2" value="2">
+        <label id="rev-occ-main-p2-label" for="rev-occ-main-pid-2" class="rev-occ-main-label">2</label> <br>
+
+    </div>
+
+    <div id="rev-occ-main-date">
+        <p>
+            <label id="rev-occ-main-label-amount" for="rev-occ-main-amount">Date</label> <br>
+            <input type="text" id="rev-occ-main-amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+        </p>
+    </div>
+
+    <p id="rev-occ-main-tmp-date">Date</p>
+    <p id="rev-occ-main-metric-date"></p>
+
+    <div id="rev-occ-main-slider-range"></div>
+
+    <!--Property Filter - Review Score & Hotel Resp Bool - Main Dashboard-->
+    <div id="rev-resp-pid-filter">
+            
+        <label>Id</label> <br>
+        <input type="checkbox" id="rev-resp-main-all-pid" value="*">
+        <label id="rev-resp-main-all-label" for="rev-resp-main-all-pid" class="rev-resp-main-label">(All)</label> <br>
+
+        <input type="checkbox" id="rev-resp-main-pid-1" value="1">
+        <label id="rev-resp-main-p1-label" for="rev-resp-main-pid-1" class="rev-resp-main-label">1</label> <br>
+
+        <input type="checkbox" id="rev-resp-main-pid-2" value="2">
+        <label id="rev-resp-main-p2-label" for="rev-resp-main-pid-2" class="rev-resp-main-label">2</label> <br>
+
+    </div>
+
+    <div id="rev-resp-main-date">
+        <p>
+            <label id="rev-resp-main-label-amount" for="rev-resp-main-amount">Date</label> <br>
+            <input type="text" id="rev-resp-main-amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+        </p>
+    </div>
     
+    <p id="rev-resp-main-tmp-date">Date</p>
+    <p id="rev-resp-main-metric-date"></p>
+    
+
+    <div id="rev-resp-main-slider-range"></div>
+
+
+    <!--Metric Graphs-->
     <!--Rev Par Graph-->
     <div id="metric-rev-par-graph" class="metric-graph">
         <canvas id="metric-revpar-canvas"></canvas>
@@ -139,7 +194,7 @@
     <div id="metric-occ-graph" class="metric-graph">
         <canvas id="occ-metric-canvas"></canvas>
     </div>
-    
+
     <!--Rev Hotel Resp Graph-->
     <div id="metric-hotel-resp-graph">
         <canvas id="metric-rev-resp-canvas"></canvas>
@@ -163,10 +218,10 @@
             <label id="revpar-all-label" for="revpar-all-pid" class="revpar-label">(All)</label> <br>
 
             <input type="checkbox" id="revpar-pid-1" value="1">
-            <label id="revpar-p1-label" class="revpar-label">1</label> <br>
+            <label id="revpar-p1-label" for="revpar-pid-1" class="revpar-label">1</label> <br>
 
             <input type="checkbox" id="revpar-pid-2" value="2">
-            <label id="revpar-p2-label" class="revpar-label">2</label> <br>
+            <label id="revpar-p2-label" for="revpar-pid-2" class="revpar-label">2</label> <br>
 
             <p>
                 <label for="amount">Date (Drag to customize view)</label> <br>

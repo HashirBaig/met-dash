@@ -20,6 +20,26 @@ function visibleElement(elem_selector, selector_type) {
         'top' : '0'
     });
 
+    $('#rev-occ-pid-filter').css({
+        'display':'none',
+    });
+    $('#rev-resp-pid-filter').css({
+        'display':'none',
+    });
+    $('#rev-occ-main-date').css({
+        'display':'none',
+    });
+    $('#rev-occ-main-tmp-date').css({
+        'display':'none',
+    });
+    $('#rev-occ-main-metric-date').css({
+        'display':'none',
+    });
+    $('#rev-occ-main-slider-range').css({
+        'display':'none',
+    });
+
+
     if (this.selector_type === 'id'){
         let class_elem = document.getElementById(this.elem_selector);
         
@@ -42,6 +62,26 @@ function visibilityCheck(class_elem) {
 }
 
 function containerOneVisible(metric_container, metric_right_panel, metric_revpar_graph, metric_occ_graph, metric_rev_resp_graph, con_1_selector_type) {
+    
+    $('#rev-occ-pid-filter').css({
+        'display':'block',
+    });
+    $('#rev-resp-pid-filter').css({
+        'display':'block',
+    });
+    $('#rev-occ-main-date').css({
+        'display':'block',
+    });
+    $('#rev-occ-main-tmp-date').css({
+        'display':'none',
+    });
+    $('#rev-occ-main-metric-date').css({
+        'display':'none',
+    });
+    $('#rev-occ-main-slider-range').css({
+        'display':'block',
+    });
+    
     //Divs to be hided
     document.getElementById('rev-par-container').style.display  = 'none';
     document.getElementById('rev-resp-container').style.display = 'none';

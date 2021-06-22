@@ -39,7 +39,7 @@
 #metric-occ-graph{
     float: right;
     margin-top: -266px;
-    margin-right: 160px;
+    margin-right: 34px;
     transition: all 0.8s ease;
 }
 #metric-rev-par-graph{
@@ -171,6 +171,85 @@
     border-right: 9px solid;
     border-top: 18px solid;
     margin-left: 41px;
+
+}
+
+/*CSS for main dashboard - Review Score & Hotel Resp Bool*/
+#rev-resp-main-tmp-date{
+    float: right;
+    margin-top: 381px;
+    margin-right: -33.5px;
+    display: none;
+}
+#rev-resp-pid-filter{
+    float: right;
+    margin-right: -55px;
+    margin-top: 280px;
+}
+#rev-resp-main-date{
+    float: right;
+    margin-top: 365px;
+    margin-right: -175px;
+}
+#rev-resp-main-label-amount{
+    margin-right: 142px;
+}
+#rev-resp-main-amount{
+    margin-top: 5px;
+    margin-right: 3px;
+    font-weight: bold;
+}
+#rev-resp-main-metric-date{
+    float: right;
+    margin-top: 405px;
+    margin-right: -124px;
+    color: #f6931f;
+    font-weight: bold;
+    font-size: 13.5px;
+}
+#rev-resp-main-slider-range{
+    float: right;
+    width: 120px;
+    margin-right: -125px;
+    margin-top: 433px;
+}
+
+/*CSS for main dashboard - Rev & Occ*/
+#rev-occ-main-tmp-date{
+    float: right;
+    margin-top: 96px;
+    margin-right: -33.5px;
+    display: none;
+}
+#rev-occ-pid-filter{
+    float: right;
+    margin-right: 80px;
+}
+#rev-occ-main-date{
+    float: right;
+    margin-top: 80px;
+    margin-right: -124px;
+}
+#rev-occ-main-amount{
+    margin-top: 5px;
+    font-weight: bold;
+}
+#rev-occ-main-label-amount{
+    margin-right: 91px;
+}
+#rev-occ-main-metric-date{
+    float: right;
+    margin-top: 127px;
+    margin-right: -124px;
+    color: #f6931f;
+    font-weight: bold;
+    font-size: 13.5px;
+}
+#rev-occ-main-slider-range{
+    float: right;
+    width: 120px;
+    margin-right: -125px;
+    margin-top: 154px;
 }
 
 /*Side Menue Bar*/
@@ -260,6 +339,7 @@ label #cancel{
     font-size: 30px;
 }
 #check:checked ~ .sidebar{
+    z-index: 1110;
     left: 0;
 }
 #check:checked ~ label #btn{
@@ -280,14 +360,14 @@ label #cancel{
 }
 
 #check:checked ~ #metric-rev-par-graph {
-    margin-left: 540px;
+    margin-left: 455px;
     margin-top: 170px;
     transform: scale(1.4);
     align-items: center;
 }
 
 #check:checked ~ #metric-occ-graph{
-    margin-right: 250px;
+    margin-right: 203px;
     margin-top: 190px;
     transform: scale(1.4);
     float: right;
@@ -295,9 +375,9 @@ label #cancel{
 }
 
 #check:checked ~ #metric-hotel-resp-graph {
-    margin-left: 290px;
+    margin-left: 185px;
     margin-top: 600px;
-    transform: scaleX(1.2);
+    transform: scaleX(1.0);
     align-items: center;
 }
 #check:checked ~ .graph-title {
