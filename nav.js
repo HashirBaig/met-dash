@@ -73,7 +73,7 @@ function containerOneVisible(metric_container, metric_right_panel, metric_revpar
         'display':'block',
     });
     $('#rev-occ-main-tmp-date').css({
-        'display':'none',
+        'display':'block',
     });
     $('#rev-occ-main-metric-date').css({
         'display':'none',

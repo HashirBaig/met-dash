@@ -1569,6 +1569,9 @@ function dataLoader_RevOccMain(rev, rev_pid_all, rev_pid_1, rev_pid_2, revpar, r
             $('#rev-occ-main-metric-date').css({
                 'display':'block',
             });
+            $('#rev-occ-main-amount').css({
+                'display':'none',
+            });
 
             c = 0;
 
@@ -1614,7 +1617,7 @@ function dataLoader_RevOccMain(rev, rev_pid_all, rev_pid_1, rev_pid_2, revpar, r
                 }
                 c+=1;
     
-                revOccMainGraph_Metric(t_rev, t_revpar, t_mon, t_adr, t_occ, t_avail, c);
+                revOccMainGraph_Metric(rev, revpar, mon, adr, occ, avail, c);
                 delete (t_rev, t_revpar, t_adr, t_occ, t_mon, t_avail);
             }
 
@@ -1734,6 +1737,9 @@ function revOccMainGraph_Metric(rev, revpar, mon, adr, occ, avail, c) {
     //Function to change arrays dynamically
     function loadData(point_1,point_2, mon_data, adr_data, rev_data, revpar_data, occ_data, avail_data, mon_tmp_data, adr_tmp_data, rev_tmp_data, revpar_tmp_data, occ_tmp_data, avail_tmp_data){
 
+        $('#rev-resp-main-tmp-date').css({
+            'display':'none',
+        });
         $('#rev-occ-main-metric-date').css({
             'display':'none',
         });
