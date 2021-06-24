@@ -1,12 +1,14 @@
 #app_header{
     width: 100%;
-    margin-top: -10px;
-    text-align: center;
-    font-size: 39px;
+    margin-top: 33px;
+    margin-left: 131px;
+    color: #042331;
+    text-align: left;
+    font-family: Microsoft PhagsPa;
+    font-size: 20px;
 }
 
-
-/*CSS for metric dashboard*/
+/*CSS for metric MAIN dashboard page*/
 #metric-right-panel{
     float: left;
     margin-top: -40px;
@@ -17,28 +19,53 @@
 
 .metric-stats{
     float: left;
+    background-color: #fff;
+    margin-left: 14px;
+    margin-top: 50px;
     text-align: center;
+    color: #042331;
     width: 14%;
-    height: 14%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 120px;
+    font-family: Microsoft PhagsPa;
+    font-weight: bold;
     font-size: 21px;
 }
 #metric-mom{
-    font-style: italic;
+    padding-bottom: -7px;
 }
+#metric-mom:hover{
+    filter: drop-shadow(3px 3px 5px #a7a7a7);
+}
+#metric-adr:hover{
+    filter: drop-shadow(3px 3px 5px #a7a7a7);
+}
+#metric-revpar:hover{
+    filter: drop-shadow(3px 3px 5px #a7a7a7);
+}
+#metric-occ:hover{
+    filter: drop-shadow(3px 3px 5px #a7a7a7);
+}
+#metric-avail:hover{
+    filter: drop-shadow(3px 3px 5px #a7a7a7);
+}
+#metric-rating:hover{
+    filter: drop-shadow(3px 3px 5px #a7a7a7);
+}
+/*filter: drop-shadow(2px 2px 4px #c8c8c8);*/
 #metric-stats{
     margin-left: 9%;
+    border-radius: 3px;
 }
 
 .metric-graph{
-    margin-top: -15px;
+    margin-top: 180px;
     height: 40%;
     width: 40%;
     transition: all 0.8s ease;
 }
 #metric-occ-graph{
     float: right;
-    margin-top: -266px;
+    margin-top: -280px;
     margin-right: 34px;
     transition: all 0.8s ease;
 }
@@ -46,13 +73,33 @@
     margin-left: 70px;
     transition: all 0.8s ease;
 }
-
-#metric-rev-resp-canvas{
-    height: 500px !important; 
-    width: 80% !important;
-    margin-left: 99px;
-    transition: all 0.8s ease;
+#metric-revpar-canvas:hover{
+    filter: drop-shadow(3px 3px 5px #a7a7a7);
 }
+#occ-metric-canvas:hover{
+    filter: drop-shadow(3px 3px 5px #a7a7a7);
+}
+#metric-hotel-resp-graph:hover{
+    filter: drop-shadow(3px 3px 5px #a7a7a7);
+}
+
+#metric-revpar-canvas, #occ-metric-canvas ,#metric-hotel-resp-graph{
+    background-color: #fff;
+    padding: 7px;
+}
+#metric-hotel-resp-graph{
+    width: 82%;
+    margin-left: 71px;
+    margin-top: 25px;
+}
+#metric-rev-resp-canvas{
+    margin-top: 25px;
+    height: 500px !important; 
+    width: 93% !important;
+    margin-left: 40px;
+    transition: all 2.0s ease;
+}
+
 
 /*CSS for Stats bar*/
 .val-adr{
@@ -174,34 +221,35 @@
 
 }
 
-/*CSS for main dashboard - Review Score & Hotel Resp Bool*/
+/*CSS for main dashboard - Review Score & Hotel Resp Bool => (in the css all margin-top: 39+5+5+7+5+5+2+5 = 73px to each)*/
 #rev-resp-main-tmp-date{
     float: right;
-    margin-top: 381px;
+    margin-top: 454px;
     margin-right: -33.5px;
     display: none;
 }
 #rev-resp-pid-filter{
     float: right;
     margin-right: -55px;
-    margin-top: 280px;
+    margin-top: 355px;
 }
 #rev-resp-main-date{
     float: right;
-    margin-top: 365px;
+    margin-top: 438px;
     margin-right: -175px;
 }
 #rev-resp-main-label-amount{
     margin-right: 142px;
+    margin-top: 73px;
 }
 #rev-resp-main-amount{
-    margin-top: 5px;
+    margin-top: 78px;
     margin-right: 3px;
     font-weight: bold;
 }
 #rev-resp-main-metric-date{
     float: right;
-    margin-top: 405px;
+    margin-top: 478px;
     margin-right: -124px;
     color: #f6931f;
     font-weight: bold;
@@ -211,35 +259,37 @@
     float: right;
     width: 120px;
     margin-right: -125px;
-    margin-top: 433px;
+    margin-top: 506px; /*Prev = 499*/
 }
 
-/*CSS for main dashboard - Rev & Occ*/
+/*CSS for main dashboard - Rev & Occ  => (in the css all margin-top: 10+40-10-1 = 39px to each)*/
 #rev-occ-main-tmp-date{
     float: right;
-    margin-top: 96px;
+    margin-top: 135px;
     margin-right: -33.5px;
     display: none;
 }
 #rev-occ-pid-filter{
     float: right;
+    margin-top: 39px;
     margin-right: 80px;
 }
 #rev-occ-main-date{
     float: right;
-    margin-top: 80px;
+    margin-top: 119px;
     margin-right: -124px;
 }
 #rev-occ-main-amount{
-    margin-top: 5px;
+    margin-top: 44px;
     font-weight: bold;
 }
 #rev-occ-main-label-amount{
+    margin-top: 39px;
     margin-right: 91px;
 }
 #rev-occ-main-metric-date{
     float: right;
-    margin-top: 127px;
+    margin-top: 166px;
     margin-right: -124px;
     color: #f6931f;
     font-weight: bold;
@@ -249,7 +299,7 @@
     float: right;
     width: 120px;
     margin-right: -125px;
-    margin-top: 154px;
+    margin-top: 193px;
 }
 
 /*Side Menue Bar*/
@@ -260,8 +310,8 @@
     text-decoration: none;
 }
 .sidebar{
-    /*z-index: 1110;*/
     position: fixed;
+    top: 0;
     left: -250px;
     width: 250px;
     height: 100%;
@@ -331,16 +381,21 @@ label #cancel{
     transition: all 0.4s ease;
 }
 .graph-title{
-    margin-left: 460px;
+    font-family: Microsoft PhagsPa;
+    color: #042331;
+    margin-left: 456px;
     font-size: 30px;
 }
 .rev-resp-graph-title{
+    font-family: Microsoft PhagsPa;
+    color: #042331;
     margin-left: 380px;
     font-size: 30px;
 }
 #check:checked ~ .sidebar{
     z-index: 1110;
     left: 0;
+    top: 0;
 }
 #check:checked ~ label #btn{
     left: 250;
@@ -352,31 +407,31 @@ label #cancel{
 }
 
 #check:checked ~ #metric-container{
-    margin-left: 200px;
+    margin-left: 123px;
 }
 
 #check:checked ~ #metric-right-panel{
-    margin-left: 200px;
+    margin-left: 123px;
 }
 
 #check:checked ~ #metric-rev-par-graph {
     margin-left: 455px;
-    margin-top: 170px;
-    transform: scale(1.4);
+    margin-top: 200px;
+    transform: scale(1.2);
     align-items: center;
 }
 
 #check:checked ~ #metric-occ-graph{
-    margin-right: 203px;
-    margin-top: 190px;
-    transform: scale(1.4);
+    margin-right: 209px;
+    margin-top: 95px;
+    transform: scale(1.2);
     float: right;
     display: flex;
 }
 
 #check:checked ~ #metric-hotel-resp-graph {
     margin-left: 185px;
-    margin-top: 600px;
+    margin-top: 443px;
     transform: scaleX(1.0);
     align-items: center;
 }
@@ -413,6 +468,8 @@ label #cancel{
     width: 85%;
 }
 #revpar-canvas{
+    padding: 10px;
+    background-color: #fff;
     height: 500px !important;
     width: 1100px !important;
 }
@@ -420,7 +477,7 @@ label #cancel{
     float: left;
     height: 100%;
     width: 15%;
-    margin-left: -35px;
+    margin-left: -15px;
 }
 #rev-par-date{
     color: #f6931f;
@@ -449,6 +506,8 @@ label #cancel{
     width: 85%;
 }
 #occ-canvas{
+    padding: 10px;
+    background-color: #fff;
     height: 500px !important;
     width: 1100px !important;
 }
@@ -456,7 +515,7 @@ label #cancel{
     float: left;
     height: 100%;
     width: 15%;
-    margin-left: -35px;
+    margin-left: -15px;
 }
 #occ-date{
     color: #f6931f;
@@ -475,6 +534,8 @@ label #cancel{
     width: 85%;
 }
 #rev-resp-canvas{
+    padding: 12px;
+    background-color: #fff;
     height: 500px !important;
     width: 1100px !important;
 }
@@ -482,7 +543,7 @@ label #cancel{
     float: left;
     height: 100%;
     width: 15%;
-    margin-left: -35px;
+    margin-left: -10px;
 }
 #rev-resp-date{
     color: #f6931f;

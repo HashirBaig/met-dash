@@ -1,5 +1,9 @@
 //Document load function here
 document.addEventListener('DOMContentLoaded', function(){
+    
+    //CSS for Main Metric Dashboard Page
+    cssForMainPage();
+
     if ( ($('#revpar-all-pid').is(':checked') === false) && ($('#rev-resp-all-pid').is(':checked') === false) && ($('#occ-all-pid').is(':checked') === false) ){
         
         //Main Page
@@ -49,6 +53,16 @@ document.addEventListener('DOMContentLoaded', function(){
 
 });
 
+function cssForMainPage() {
+
+    //Adding gradient to body of html page
+    
+    $('body').css({
+        'background-color':'#DADADA',
+    });
+    
+}
+
 
 //Making API calls
 function availMetricApiCall(){
@@ -67,7 +81,7 @@ function loadAvailMetricData(data) {
         document.getElementById('avail-val').innerHTML = 0 + '%';
         $(document).ready(function(){
             $('#avail-val').css({
-                'color':'lightgray',
+                'color':'darkgray',
             });
             $('.triangle-avail-up').css({
                 'display' : 'none',
@@ -113,6 +127,9 @@ function loadAvailMetricData(data) {
                 $('#avail-val').css({
                     'color':'#FC6847',
                 });
+                $('#metric-avail').css({
+                    'background-color':'#FFEBE7',
+                });
                 $('.triangle-avail-up').css({
                     'display' : 'none',
                 });
@@ -129,7 +146,7 @@ function loadAvailMetricData(data) {
             document.getElementById('avail-val').innerHTML = 0 + '%';
             $(document).ready(function(){
                 $('#avail-val').css({
-                    'color':'lightgray',
+                    'color':'darkgray',
                 });
                 $('.triangle-avail-up').css({
                     'display' : 'none',
@@ -158,7 +175,7 @@ function loadRatingMetricData(data) {
         document.getElementById('rating-val').innerHTML = 0 + '%';
         $(document).ready(function(){
             $('#rating-val').css({
-                'color':'lightgray',
+                'color':'darkgray',
             });
             $('.triangle-rating-up').css({
                 'display' : 'none',
@@ -208,6 +225,9 @@ function loadRatingMetricData(data) {
             $(document).ready(function(){
                 $('#rating-val').css({
                     'color':'#FC6847',
+                });
+                $('#metric-rating').css({
+                    'background-color':'#FFEBE7',
                 });
                 $('.triangle-rating-up').css({
                     'display': 'none',
@@ -310,6 +330,9 @@ function loadMetricData(data) {
                 $('#adr-val').css({
                     'color':'#FC6847',
                 });
+                $('#metric-revpar').css({
+                    'background-color':'#FFEBE7',
+                });
                 $('.triangle-adr-up').css({
                     'display': 'none',
                 });
@@ -326,7 +349,7 @@ function loadMetricData(data) {
             document.getElementById('adr-val').innerHTML = 0 + '%';
             $(document).ready(function(){
                 $('#adr-val').css({
-                    'color':'lightgray',
+                    'color':'darkgray',
                 });
                 $('.triangle-adr-up').css({
                     'display' : 'none',
@@ -360,6 +383,9 @@ function loadMetricData(data) {
             $(document).ready(function(){
                 $('#revpar-val').css({
                     'color':'#FC6847',
+                });
+                $('#metric-revpar').css({
+                    'background-color':'#FFEBE7',
                 });
                 $('.triangle-revpar-up').css({
                     'display': 'none',
@@ -451,6 +477,9 @@ function loadOccMetric(data) {
                 $('#occ-val').css({
                     'color':'#FC6847',
                 });
+                $('#metric-occ').css({
+                    'background-color':'#FFEBE7',
+                });
                 $('.triangle-occ-up').css({
                     'display': 'none',
                 });
@@ -467,7 +496,7 @@ function loadOccMetric(data) {
             document.getElementById('occ-val').innerHTML = 0 + '%';
             $(document).ready(function(){
                 $('#occ-val').css({
-                    'color':'lightgray',
+                    'color':'darkgray',
                 });
                 $('.triangle-occ-up').css({
                     'display' : 'none',
@@ -977,6 +1006,9 @@ function revHotelRespGraph_Metric(rev_score, mon, resp_bool, c) {
         });
         $("#rev-resp-main-amount").css({
             'display':'block',
+            'float':'right',
+            'margin-top':'6px',
+            'margin-right':'-1px',
         });
         $("#rev-resp-main-label-amount").css({
             'display':'none',
@@ -990,8 +1022,6 @@ function revHotelRespGraph_Metric(rev_score, mon, resp_bool, c) {
 
         let t_val_1 = monthName(first_mon) + ' ' + first_year; 
         let t_val_2 = monthName(last_mon) + ' ' + last_year;
-
-        console.log('t_val_1: ' + t_val_1 + ' t_val_2: ' + t_val_2 );
 
         
         for (let x in mon_data) {
@@ -1075,7 +1105,9 @@ function revHotelRespGraph_Metric(rev_score, mon, resp_bool, c) {
                     },
                     scaleLabel: {
                         display: true,
-                        labelString: 'Avg. Review Score'
+                        labelString: 'Avg. Review Score',
+                        fontSize: 16,
+                        fontStyle: "bold",
                     }
                     }, {
                         id:"y-axis-2",
@@ -1092,7 +1124,9 @@ function revHotelRespGraph_Metric(rev_score, mon, resp_bool, c) {
                         },
                         scaleLabel: {
                             display: true,
-                            labelString: 'Avg. Hotel Response Bool'
+                            labelString: 'Avg. Hotel Response Bool',
+                            fontSize: 16,
+                            fontStyle: "bold",
                         }
                 }],
                 xAxes : [{
@@ -1105,7 +1139,9 @@ function revHotelRespGraph_Metric(rev_score, mon, resp_bool, c) {
                     },
                     scaleLabel: {
                         display: true,
-                        labelString: 'Month of Date'
+                        labelString: 'Month of Date',
+                        fontStyle: "bold",
+                        fontSize: 16,
                     }
                 }]
             },
@@ -1746,13 +1782,13 @@ function revOccMainGraph_Metric(rev, revpar, mon, adr, occ, avail, c) {
 
         $('#rev-occ-main-date').css({
             'float':'right',
-            'margin-top':'80px',
+            'margin-top':'119px', //prev = 80px
             'margin-right':'-175px',
         });
         
         $('#rev-occ-main-amount').css({
             'display':'block',
-            'margin-top':'12px',
+            'margin-top':'12px',//prev = 12px
             'font-weight':'bold',
         });
 
@@ -1785,8 +1821,6 @@ function revOccMainGraph_Metric(rev, revpar, mon, adr, occ, avail, c) {
         revPar_v_Par_Graph_Metric.update();
         occ_v_Avail_Graph_Metric.update();
     }
-
-		
 
     let revParCanvas_Metric = document.getElementById('metric-revpar-canvas').getContext('2d');
     let occCanvas_Metric = document.getElementById('occ-metric-canvas').getContext('2d');
@@ -1865,7 +1899,9 @@ function revOccMainGraph_Metric(rev, revpar, mon, adr, occ, avail, c) {
                         },
                         scaleLabel: {
                             display: true,
-                            labelString: 'Avg. Occupancy %'
+                            labelString: 'Avg. Occupancy %',
+                            fontSize: 12,
+                            fontStyle: "bold",
                         }
                     }, {
                         id:"y-axis-2",
@@ -1878,12 +1914,14 @@ function revOccMainGraph_Metric(rev, revpar, mon, adr, occ, avail, c) {
                         },
                         scaleLabel: {
                             display: true,
-                            labelString: 'Avg. Available Rooms'
+                            labelString: 'Avg. Available Rooms',
+                            fontSize: 12,
+                            fontStyle: "bold",
                         }
                 }],
                 xAxes : [{
                     ticks: {
-                        display: true
+                        display: true,
                     },
                     barPercentage: 1.1,
                     gridLines : {
@@ -1891,7 +1929,9 @@ function revOccMainGraph_Metric(rev, revpar, mon, adr, occ, avail, c) {
                     },
                     scaleLabel: {
                         display: true,
-                        labelString: 'Month of Date'
+                        labelString: 'Month of Date',
+                        fontStyle: "bold",
+                        fontSize: 15,
                     }
                 }]
             },
@@ -1929,7 +1969,9 @@ function revOccMainGraph_Metric(rev, revpar, mon, adr, occ, avail, c) {
                     },
                     scaleLabel: {
                         display: true,
-                        labelString: 'Revenue'
+                        labelString: 'Revenue',
+                        fontStyle: "bold",
+                        fontSize: 12,
                     }
                     }, {
                         id:"y-axis-2",
@@ -1942,7 +1984,9 @@ function revOccMainGraph_Metric(rev, revpar, mon, adr, occ, avail, c) {
                         },
                         scaleLabel: {
                             display: true,
-                            labelString: 'Avg. ADR'
+                            labelString: 'Avg. ADR',
+                            fontStyle: "bold",
+                            fontSize: 12,
                         }
                 }],
                 xAxes : [{
@@ -1955,7 +1999,9 @@ function revOccMainGraph_Metric(rev, revpar, mon, adr, occ, avail, c) {
                     },
                     scaleLabel: {
                         display: true,
-                        labelString: 'Month of Date'
+                        labelString: 'Month of Date',
+                        fontStyle: "bold",
+                        fontSize: 15,
                     }
                 }]
             },
@@ -2404,23 +2450,19 @@ function occVAvailGraph(occ, mon, avail, c) {
                 datasets: dataset
             },
             options: {
-                /*tooltips: {
-                    mode: 'single'
-                },*/
                 scales: {
                     yAxes: [{
                         id:"y-axis-1",
                         position:'left',
                         type: 'linear',
                         ticks: {
-                            beginAtZero:true/*,
-                            callback: function(label, index, labels){
-		                		return label/1000+'k';
-		                	},*/
+                            beginAtZero:true,
                         },
                         scaleLabel: {
                             display: true,
-                            labelString: 'Avg. Occupancy %'
+                            labelString: 'Avg. Occupancy %',
+                            fontSize: 16,
+                            fontStyle: "bold",
                         }
                         }, {
                             id:"y-axis-2",
@@ -2433,7 +2475,9 @@ function occVAvailGraph(occ, mon, avail, c) {
                             },
                             scaleLabel: {
                                 display: true,
-                                labelString: 'Avg. Available Rooms'
+                                labelString: 'Avg. Available Rooms',
+                                fontSize: 16,
+                                fontStyle: "bold",
                             }
                     }],
                     xAxes : [{
@@ -2446,7 +2490,9 @@ function occVAvailGraph(occ, mon, avail, c) {
                         },
                         scaleLabel: {
                             display: true,
-                            labelString: 'Month of Date'
+                            labelString: 'Month of Date',
+                            fontSize: 16,
+                            fontStyle: "bold",
                         }
                     }]
                 },
@@ -3001,7 +3047,9 @@ function revHotelRespGraph(rev_score ,mon, resp_bool, c) {
                         },
                         scaleLabel: {
                             display: true,
-                            labelString: 'Avg. Review Score'
+                            labelString: 'Avg. Review Score',
+                            fontStyle: "bold",
+                            fontSize: 16,
                         }
                         }, {
                             id:"y-axis-2",
@@ -3018,7 +3066,9 @@ function revHotelRespGraph(rev_score ,mon, resp_bool, c) {
                             },
                             scaleLabel: {
                                 display: true,
-                                labelString: 'Avg. Hotel Response Bool'
+                                labelString: 'Avg. Hotel Response Bool',
+                                fontStyle: "bold",
+                                fontSize: 16,
                             }
                     }],
                     xAxes : [{
@@ -3031,7 +3081,9 @@ function revHotelRespGraph(rev_score ,mon, resp_bool, c) {
                         },
                         scaleLabel: {
                             display: true,
-                            labelString: 'Month of Date'
+                            labelString: 'Month of Date',
+                            fontStyle: "bold",
+                            fontSize: 16,
                         }
                     }]
                 },
@@ -3549,7 +3601,9 @@ function revParVRevGraph(rev, revpar, mon, adr, c) {
                         },
                         scaleLabel: {
                             display: true,
-                            labelString: 'Revenue'
+                            labelString: 'Revenue',
+                            fontSize: 16,
+                            fontStyle: "bold",
                         }
                         }, {
                             id:"y-axis-2",
@@ -3562,7 +3616,9 @@ function revParVRevGraph(rev, revpar, mon, adr, c) {
                             },
                             scaleLabel: {
                                 display: true,
-                                labelString: 'Avg. ADR'
+                                labelString: 'Avg. ADR',
+                            fontSize: 16,
+                            fontStyle: "bold",
                             }
                     }],
                     xAxes : [{
@@ -3575,7 +3631,9 @@ function revParVRevGraph(rev, revpar, mon, adr, c) {
                         },
                         scaleLabel: {
                             display: true,
-                            labelString: 'Month of Date'
+                            labelString: 'Month of Date',
+                            fontSize: 16,
+                            fontStyle: "bold",
                         }
                     }]
                 },
