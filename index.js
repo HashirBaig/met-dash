@@ -1124,7 +1124,7 @@ function revHotelRespGraph_Metric(rev_score, mon, resp_bool, c) {
                         },
                         scaleLabel: {
                             display: true,
-                            labelString: 'Avg. Hotel Response Bool',
+                            labelString: 'Avg. Hotel Resp Bool',
                             fontSize: 16,
                             fontStyle: "bold",
                         }

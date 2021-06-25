@@ -24,7 +24,7 @@
     margin-top: 50px;
     text-align: center;
     color: #042331;
-    width: 14%;
+    width: 170px;
     height: 120px;
     font-family: Microsoft PhagsPa;
     font-weight: bold;
@@ -91,7 +91,9 @@
     width: 82%;
     margin-left: 71px;
     margin-top: 25px;
+    transition: all 1.0s ease;
 }
+/*
 #metric-rev-resp-canvas{
     margin-top: 25px;
     height: 500px !important; 
@@ -99,6 +101,7 @@
     margin-left: 40px;
     transition: all 2.0s ease;
 }
+*/
 
 
 /*CSS for Stats bar*/
@@ -548,4 +551,42 @@ label #cancel{
 #rev-resp-date{
     color: #f6931f;
     font-weight: bold;
+}
+/*Media queries here*/
+@media screen and (max-width: 720px){ 
+    #app_header{
+        margin-left: 95px;
+    }
+    #metric-right-panel{
+        margin-top: 10px;
+        margin-left: 35px;
+    }
+    .metric-stats{
+        margin-top: 10px;
+    }
+    #metric-rev-par-graph{
+        position: relative;
+        margin-top: 820px;
+        margin-left: 5px;
+        width: 300px;
+        height: 180px;
+    }
+    #metric-occ-graph{
+        position: relative;
+        margin-top: 2px;
+        margin-right: 12px;
+        width: 300px;
+        height: 180px;
+    }
+    #metric-hotel-resp-graph{
+        position: relative;
+        margin-top: 205px;
+        margin-left: 5px;
+        width: 450px;
+        height: 270px;
+    }
+    #rev-occ-pid-filter, #rev-occ-main-date, #rev-occ-main-tmp-date, #rev-occ-main-metric-date, #rev-occ-main-slider-range, #rev-resp-pid-filter, #rev-resp-main-date, #rev-resp-main-tmp-date, #rev-resp-main-metric-date, #rev-resp-main-slider-range{
+        display: none;
+    }
+    
 }
