@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
     <script
 		  src="https://code.jquery.com/jquery-3.6.0.js"
 		  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
@@ -28,13 +28,13 @@
     </label>
 
     <div class="sidebar">
-        <header>HotelDash</header>
+        <header>Hotel Dash</header>
 
         <ul class="nav-btn-list">
-            <li><button id="metric-btn"           onclick="containerOneVisible('metric-container', 'metric-right-panel', 'metric-rev-par-graph', 'metric-occ-graph', 'metric-rev-resp-graph','id')"> <i class="fas fa-qrcode"> </i>  Metrics </button></li>
-            <li><button id="revpar-v-rev-btn"     onclick="visibleElement('rev-par-container','id')">  <i class="fas fa-chart-line"></i>  RevPar v Rev     </button></li>
-            <li><button id="rev-v-hotel-resp-btn" onclick="visibleElement('rev-resp-container','id')"> <i class="fas fa-hotel">     </i>  Rev v Hotel Resp </button></li>
-            <li><button id="occ-v-avail-btn"      onclick="visibleElement('occ-container','id')">      <i class="fas fa-bed">       </i>  Occ % v Avail    </button></li>
+            <li><button id="metric-btn"           > <i class="fas fa-qrcode">     </i>  Metrics          </button> </li>
+            <li><button id="revpar-v-rev-btn"     > <i class="fas fa-chart-line"> </i>  RevPar v Rev     </button> </li>
+            <li><button id="rev-v-hotel-resp-btn" > <i class="fas fa-hotel">      </i>  Rev v Hotel Resp </button> </li>
+            <li><button id="occ-v-avail-btn"      > <i class="fas fa-bed">        </i>  Occ % v Avail    </button> </li>
         </ul>
 
     </div>
@@ -43,90 +43,85 @@
         <h1 id="app_header">METRIC DASHBOARD</h1>
     </div>
     
-    <!--Metric Right Panel-->
-    <div id="metric-right-panel">
-
-        <!--Metric Statictis-->
-        <div id="metric-stats">
+    <!--Metric Statictis-->
+    <div id="metric-stats" class="wrapper-metric-stats">
             
-            <!--MoM-->
-            <div id="metric-mom" class="metric-stats">
-                <p>Latest Month over Month (MoM)</p>
-            </div>
-
-            <!--ADR-->
-            <div id="metric-adr" class="metric-stats">
-                <p>ADR</p>
-                <div id="stats-adr">
-                    
-                    <div class="triangle-adr-up"></div>
-                    <div class="triangle-adr-down"></div>
-
-                    <div class="val-adr">
-                        <p id="adr-val"></p>
-                    </div>
-
-                </div>
-            </div>
-
-            <!--RevPar-->
-            <div id="metric-revpar" class="metric-stats">
-                <p>RevPar</p>
-                <div id="stats-revpar">
-                    
-                    <div class="triangle-revpar-up"> </div>
-                    <div class="triangle-revpar-down"> </div>
-
-                    <div class="val-revpar">
-                        <p id="revpar-val"></p>
-                    </div>
-
-                </div>
-            </div>
-
-            <!--Occupancy %-->
-            <div id="metric-occ" class="metric-stats">
-                <p>Occ %</p>
-                <div id="stats-occ">
-                    <div class="triangle-occ-up"></div>
-                    <div class="triangle-occ-down"></div>
-
-                    <div class="val-occ">
-                        <p id="occ-val"></p>
-                    </div>
-                </div>
-            </div>
-
-            <!--Room Availability-->
-            <div id="metric-avail" class="metric-stats">
-                <p>Avail %</p>
-                <div id="stats-avail">
-                    
-                    <div class="triangle-avail-up"></div>
-                    <div class="triangle-avail-down"></div>
-
-                    <div class="val-avail">
-                        <p id="avail-val"></p>
-                    </div>
-                </div>
-            </div>
-
-            <!--Rating-->
-            <div id="metric-rating" class="metric-stats">
-                <p>Rating</p>
-                <div id="stats-rating">
-                    
-                    <div class="triangle-rating-up"></div>
-                    <div class="triangle-rating-down"></div>
-                    
-                    <div class="val-rating">
-                        <p id="rating-val"></p>
-                    </div>
-                </div>
-            </div>
-            
+        <!--MoM-->
+        <div id="metric-mom" class="metric-stats-item">
+            <p>Latest Month <br> over Month <br> (MoM)</p>
         </div>
 
+        <!--ADR-->
+        <div id="metric-adr" class="metric-stats-item">
+            <p>ADR</p>
+            <div id="stats-adr">
+                
+                <div class="triangle-adr-up"></div>
+                <div class="triangle-adr-down"></div>
+
+                <div class="val-adr">
+                    <p id="adr-val"></p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--RevPar-->
+        <div id="metric-revpar" class="metric-stats-item">
+            <p>RevPar</p>
+            <div id="stats-revpar">
+                
+                <div class="triangle-revpar-up"> </div>
+                <div class="triangle-revpar-down"> </div>
+
+                <div class="val-revpar">
+                    <p id="revpar-val"></p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--Occupancy %-->
+        <div id="metric-occ" class="metric-stats-item">
+            <p>Occ %</p>
+            <div id="stats-occ">
+                <div class="triangle-occ-up"></div>
+                <div class="triangle-occ-down"></div>
+
+                <div class="val-occ">
+                    <p id="occ-val"></p>
+                </div>
+            </div>
+        </div>
+
+        <!--Room Availability-->
+        <div id="metric-avail" class="metric-stats-item">
+            <p>Avail %</p>
+            <div id="stats-avail">
+                
+                <div class="triangle-avail-up"></div>
+                <div class="triangle-avail-down"></div>
+
+                <div class="val-avail">
+                    <p id="avail-val"></p>
+                </div>
+            </div>
+        </div>
+
+        <!--Rating-->
+        <div id="metric-rating" class="metric-stats-item">
+            <p>Rating</p>
+            <div id="stats-rating">
+                
+                <div class="triangle-rating-up"></div>
+                <div class="triangle-rating-down"></div>
+                
+                <div class="val-rating">
+                    <p id="rating-val"></p>
+                </div>
+            </div>
+        </div>
+        
     </div>
 
     <!--Property Filter - Rev & Occ - Main Dashboard-->
@@ -185,7 +180,6 @@
     <div id="rev-resp-main-slider-range"></div>
 
 
-    <!--Metric Graphs-->
     <!--Rev Par Graph-->
     <div id="metric-rev-par-graph" class="metric-graph">
         <canvas id="metric-revpar-canvas"></canvas>
@@ -203,7 +197,7 @@
 
 
     <!--Container 2-->
-    <div id="rev-par-container">
+    <div id="rev-par-container" class="revpar-graph-container">
         <h2 class="graph-title">RevPar vs Rev</h2>
                         
         <!--Graph div-->
@@ -300,7 +294,6 @@
 
     <script src="index.js"></script>
     <script src="nav.js"></script>
-    <script src="responsive.js"></script>
     
 </body>
 </html>

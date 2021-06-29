@@ -9,23 +9,24 @@
 }
 
 /*CSS for metric MAIN dashboard page*/
-#metric-right-panel{
-    float: left;
+.wrapper-metric-stats{
+    display: flex;
     margin-top: -40px;
-    width: 100%;
-    height: 100%;
+    max-height: 190px;
+    overflow-x: auto;
     transition: all 0.4s ease;
 }
-
-.metric-stats{
-    float: left;
+.wrapper-metric-stats::-webkit-scrollbar{
+    width: 0;
+}
+.metric-stats-item{
     background-color: #fff;
     margin-left: 14px;
     margin-top: 50px;
     text-align: center;
     color: #042331;
-    width: 170px;
-    height: 120px;
+    min-width: 170px;
+    max-height: 180px;
     font-family: Microsoft PhagsPa;
     font-weight: bold;
     font-size: 21px;
@@ -70,6 +71,7 @@
     transition: all 0.8s ease;
 }
 #metric-rev-par-graph{
+    margin-top: 15px;
     margin-left: 70px;
     transition: all 0.8s ease;
 }
@@ -91,7 +93,7 @@
     width: 82%;
     margin-left: 71px;
     margin-top: 25px;
-    transition: all 1.0s ease;
+    transition: all 0.8s ease;
 }
 /*
 #metric-rev-resp-canvas{
@@ -409,24 +411,24 @@ label #cancel{
     left: 195px;
 }
 
-#check:checked ~ #metric-container{
+#check:checked ~ #metric-stats{
     margin-left: 123px;
 }
 
-#check:checked ~ #metric-right-panel{
+#check:checked ~ .metric-stats-item{
     margin-left: 123px;
 }
 
 #check:checked ~ #metric-rev-par-graph {
     margin-left: 455px;
-    margin-top: 200px;
+    margin-top: 44px;
     transform: scale(1.2);
     align-items: center;
 }
 
 #check:checked ~ #metric-occ-graph{
     margin-right: 209px;
-    margin-top: 95px;
+    margin-top: 70px;
     transform: scale(1.2);
     float: right;
     display: flex;
@@ -434,7 +436,7 @@ label #cancel{
 
 #check:checked ~ #metric-hotel-resp-graph {
     margin-left: 185px;
-    margin-top: 443px;
+    margin-top: 393px;
     transform: scaleX(1.0);
     align-items: center;
 }
@@ -553,39 +555,89 @@ label #cancel{
     font-weight: bold;
 }
 /*Media queries here*/
-@media screen and (max-width: 720px){ 
+@media screen and (max-width: 480px){ 
     #app_header{
         margin-left: 95px;
     }
-    #metric-right-panel{
-        margin-top: 10px;
-        margin-left: 35px;
-    }
-    .metric-stats{
-        margin-top: 10px;
-    }
     #metric-rev-par-graph{
         position: relative;
-        margin-top: 820px;
-        margin-left: 5px;
-        width: 300px;
-        height: 180px;
+        margin-top: 0px;
+        margin-left: 40px;
+        width: 375px;
+        height: 223px;
+        background-color: aqua;
     }
+    
+    #metric-revpar-canvas{
+        width: 375px;
+        height: 223px;
+    }
+    
     #metric-occ-graph{
         position: relative;
-        margin-top: 2px;
-        margin-right: 12px;
-        width: 300px;
-        height: 180px;
+        margin-top: 25px;
+        margin-right: 49px;
+        width: 375px;
+        height: 225px;
+        background-color: aqua;
+    }
+    
+    #occ-metric-canvas{
+        width: 375px;
+        height: 225px;
     }
     #metric-hotel-resp-graph{
         position: relative;
-        margin-top: 205px;
+        margin-top: 280px;
         margin-left: 5px;
         width: 450px;
         height: 270px;
     }
-    #rev-occ-pid-filter, #rev-occ-main-date, #rev-occ-main-tmp-date, #rev-occ-main-metric-date, #rev-occ-main-slider-range, #rev-resp-pid-filter, #rev-resp-main-date, #rev-resp-main-tmp-date, #rev-resp-main-metric-date, #rev-resp-main-slider-range{
+    /*Menu button-to-graphs CSS*/
+    #check:checked ~ #metric-rev-par-graph {
+        position: relative;
+        margin-top: 20px;
+        margin-left: 31px;
+        width: 375px;
+        height: 225px;
+    }
+    #check:checked ~ #metric-occ-graph{
+        position: relative;
+        margin-top: 75px;
+        margin-right: 25px;
+        width: 375px;
+        height: 225px;
+    }
+    #check:checked ~ #metric-hotel-resp-graph {
+        position: relative;
+        margin-top: 300px;
+        margin-left: 5px;
+        width: 450px;
+        height: 270px;
+    }
+    /*Non Metric Graphs*/
+    #check:checked ~ #metric-rev-par-graph {
+        position: relative;
+        margin-top: 20px;
+        margin-left: 31px;
+        width: 375px;
+        height: 225px;
+    }
+    #check:checked ~ #metric-occ-graph{
+        position: relative;
+        margin-top: 75px;
+        margin-right: 25px;
+        width: 375px;
+        height: 225px;
+    }
+    #check:checked ~ #metric-hotel-resp-graph {
+        position: relative;
+        margin-top: 353px;
+        margin-left: 5px;
+        width: 450px;
+        height: 270px;
+    }
+    #rev-par-control-panel, #rev-resp-control-panel, #occ-control-panel, #rev-occ-pid-filter, #rev-occ-main-date, #rev-occ-main-tmp-date, #rev-occ-main-metric-date, #rev-occ-main-slider-range, #rev-resp-pid-filter, #rev-resp-main-date, #rev-resp-main-tmp-date, #rev-resp-main-metric-date, #rev-resp-main-slider-range{
         display: none;
     }
     
