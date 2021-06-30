@@ -2,9 +2,8 @@ $(document).ready( function() {
     
     //For metric-btn
     $('#metric-btn').click( function() {
-
-        if ( window.innerWidth === 567 ) {
-            console.log('in here');
+        
+        if ( window.outerWidth <= 720 ) {
 
             //Hiding main metric page's filters
             $('#rev-occ-pid-filter').hide();
@@ -12,15 +11,24 @@ $(document).ready( function() {
             $('#rev-occ-main-tmp-date').hide();
             $('#rev-occ-main-metric-date').hide();
             $('#rev-occ-main-slider-range').hide();
-
             $('#rev-resp-pid-filter').hide();
             $('#rev-resp-main-date').hide();
             $('#rev-resp-main-tmp-date').hide();
             $('#rev-resp-main-metric-date').hide();
             $('#rev-resp-main-slider-range').hide();
-            $('#metric-rev-par-graph').hide();
-            $('#metric-occ-graph').hide();
-            $('#metric-hotel-resp-graph').hide();
+            //Hiding 'rev-par-container' 
+            $('#rev-par-container').hide();
+            //Hiding 'rev-resp-container' 
+            $('#rev-resp-container').hide();
+            //Hiding 'occ-container' 
+            $('#occ-container').hide();
+
+            //Showing graphs
+            $('#metric-rev-par-graph').show();
+            $('#metric-occ-graph').show();
+            $('#metric-hotel-resp-graph').show();
+            $('#metric-container').show();
+            $('#metric-stats').show();
 
         }else{
 
@@ -52,6 +60,59 @@ $(document).ready( function() {
     
     //For revpar-v-rev-btn
     $('#revpar-v-rev-btn').click( function() {
+
+        if ( window.outerWidth === 480 ) {
+            //Hiding main metric page
+            $('#metric-container').hide();
+            $('#metric-stats').hide();
+            $('#rev-occ-pid-filter').hide();
+            $('#rev-occ-main-date').hide();
+            $('#rev-occ-main-tmp-date').hide();
+            $('#rev-occ-main-metric-date').hide();
+            $('#rev-occ-main-slider-range').hide();
+            $('#rev-resp-pid-filter').hide();
+            $('#rev-resp-main-date').hide();
+            $('#rev-resp-main-tmp-date').hide();
+            $('#rev-resp-main-metric-date').hide();
+            $('#rev-resp-main-slider-range').hide();
+            $('#metric-rev-par-graph').hide();
+            $('#metric-occ-graph').hide();
+            $('#metric-hotel-resp-graph').hide();
+            //Hiding 'rev-resp-container' 
+            $('#rev-resp-container').hide();
+            //Hiding 'occ-container' 
+            $('#occ-container').hide();
+
+            //Showing 'rev-par-container' 
+            $('#rev-par-container').show();
+
+        }else{
+
+            //Hiding main metric page
+            $('#metric-container').hide();
+            $('#metric-stats').hide();
+            $('#rev-occ-pid-filter').hide();
+            $('#rev-occ-main-date').hide();
+            $('#rev-occ-main-tmp-date').hide();
+            $('#rev-occ-main-metric-date').hide();
+            $('#rev-occ-main-slider-range').hide();
+            $('#rev-resp-pid-filter').hide();
+            $('#rev-resp-main-date').hide();
+            $('#rev-resp-main-tmp-date').hide();
+            $('#rev-resp-main-metric-date').hide();
+            $('#rev-resp-main-slider-range').hide();
+            $('#metric-rev-par-graph').hide();
+            $('#metric-occ-graph').hide();
+            $('#metric-hotel-resp-graph').hide();
+            //Hiding 'rev-resp-container' 
+            $('#rev-resp-container').hide();
+            //Hiding 'occ-container' 
+            $('#occ-container').hide();
+
+            //Showing 'rev-par-container' 
+            $('#rev-par-container').show();
+
+        }
         
         //Hiding main metric page
         $('#metric-container').hide();
