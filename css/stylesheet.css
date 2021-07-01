@@ -579,8 +579,8 @@ label #cancel{
     }
     
     #metric-revpar-canvas{
-        width: 45.0em;
-        height: 35.0em;
+        width: 35.0em;
+        height: 25.0em;
     }
     
     #metric-occ-graph{
