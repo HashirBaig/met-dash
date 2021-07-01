@@ -559,24 +559,28 @@ label #cancel{
         font-size: 1.2em;
     }
     #metric-stats{
+        width: 100%;
         margin-top: 1.5em;
         margin-left: 0.1em;
     }
     #metric-rev-par-graph{
         position: relative;
-        margin-top: 0.4em;
+        margin-top: 0.9em;
         margin-left: 0.3em;
         
         width: 24.0em;
+        height: 12.0em;
+        /*
+        width: 24.0em;
         height: 13.0em;
-        
-        overflow: auto;
+        */
+        overflow: hidden;
         background-color: aqua;
     }
     
     #metric-revpar-canvas{
-        width: 100%;
-        height: 100%;
+        width: 22.0em;
+        height: 11.0em;
     }
     
     #metric-occ-graph{
