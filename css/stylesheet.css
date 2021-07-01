@@ -562,7 +562,6 @@ label #cancel{
         width: 26.0em;
         margin-top: 1.9em;
         margin-left: 0.1em;
-        background-color: cadetblue;
     }
     #metric-rev-par-graph{
         position: relative;
@@ -572,6 +571,7 @@ label #cancel{
         width: 22.0em;
         height: 12.0em;
         
+        backface-visibility: hidden;
         overflow: hidden;
     }
     
@@ -589,7 +589,7 @@ label #cancel{
         height: 12.0em;
         
         overflow: hidden;
-
+        backface-visibility: hidden;
     }
     #occ-metric-canvas{
         width: 30.0em;
