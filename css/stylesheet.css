@@ -560,7 +560,7 @@ label #cancel{
     }
     #metric-stats{
         width: 26.0em;
-        margin-top: 1.5em;
+        margin-top: 1.9em;
         margin-left: 0.1em;
         background-color: cadetblue;
     }
@@ -598,7 +598,7 @@ label #cancel{
 
     #metric-hotel-resp-graph{
         position: relative;
-        margin-top: 17.15em;
+        margin-top: 16.7em;
         margin-left: 0.3em;
         
         width: 28.0em;
