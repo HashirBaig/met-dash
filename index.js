@@ -258,12 +258,13 @@ function loadMetricData(data) {
     let prev_adr;     let curr_adr;
     let prev_revpar;  let curr_revpar;
     let rslt_adr;     let rslt_revpar;
+
     if ( parsed_data[0].adrmetric === null && parsed_data[0].revparmetric === null ) {
         
         document.getElementById('adr-val').innerHTML = 0 + '%';
         $(document).ready(function(){
             $('#adr-val').css({
-                'color':'lightgray',
+                'color':'darkgray',
             });
             $('.triangle-adr-up').css({
                 'display' : 'none',
@@ -280,9 +281,12 @@ function loadMetricData(data) {
         document.getElementById('revpar-val').innerHTML = 0 + '%';
         $(document).ready(function(){
             $('#revpar-val').css({
-                'color':'lightgray',
+                'color':'darkgray',
             });
-            $('.triangle-revpar').css({
+            $('.triangle-revpar-up').css({
+                'display' : 'none',
+            });
+            $('.triangle-revpar-down').css({
                 'display' : 'none',
             });
             $('.val-revpar').css({
@@ -403,7 +407,7 @@ function loadMetricData(data) {
             document.getElementById('revpar-val').innerHTML = 0 + '%';
             $(document).ready(function(){
                 $('#revpar-val').css({
-                    'color':'lightgray',
+                    'color':'darkgray',
                 });
                 $('.triangle-revpar-up').css({
                     'display' : 'none',
@@ -433,7 +437,7 @@ function loadOccMetric(data) {
         document.getElementById('occ-val').innerHTML = 0 + '%';
         $(document).ready(function(){
             $('#occ-val').css({
-                'color':'lightgray',
+                'color':'darkgray',
             });
             $('.triangle-occ-up').css({
                 'display' : 'none',
