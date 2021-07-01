@@ -554,35 +554,50 @@ label #cancel{
 /*Media queries here*/
 @media screen and (max-width: 720px){ 
     #app_header{
-        margin-left: 6.0em;
+        margin-top: 1.5em;
+        margin-left: 4.0em;
+        font-size: 1.2em;
     }
     #metric-stats{
+        margin-top: 1.5em;
         margin-left: 0.1em;
     }
     #metric-rev-par-graph{
         position: relative;
-        margin-top: 0em;
+        margin-top: 0.4em;
         margin-left: 0.3em;
-        width: 24.0em;
-        height: 14.0em;
+        
+        width: 100%;
+        height: 100%;
+        
+        overflow: auto;
+        background-color: aqua;
     }
+    
     #metric-revpar-canvas{
-        width: 24.0em;
-        height: 14.0em;
+        width: 100%;
+        height: 100%;
     }
+    
     #metric-occ-graph{
         position: relative;
         margin-top: 1.6em;
         margin-left: 0.3em;
-        width: 24.0em;
-        height: 14.0em;
+        
+        width: 100%;
+        height: 100%;
+        
+        overflow: auto;
+        background-color: aqua;
+
     }
     #occ-metric-canvas{
-        width: 24.0em;
-        height: 14.0em;
+        width: 100%;
+        height: 100%;
     }
-
+    
     #metric-hotel-resp-graph{
+        display: none;
         position: relative;
         margin-top: 17.15em;
         margin-left: 0.3em;
