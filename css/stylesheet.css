@@ -568,7 +568,7 @@ label #cancel{
         margin-top: 0.9em;
         margin-left: 0.3em;
         
-        width: 24.0em;
+        width: 22.0em;
         height: 12.0em;
         /*
         width: 24.0em;
@@ -588,7 +588,7 @@ label #cancel{
         margin-top: 1.6em;
         margin-left: 0.3em;
         
-        width: 24.0em;
+        width: 22.0em;
         height: 12.0em;
         /*
         width: 24.0em;
@@ -600,8 +600,8 @@ label #cancel{
 
     }
     #occ-metric-canvas{
-        width: 23.0em;
-        height: 11.0em;
+        width: 30.0em;
+        height: 20.0em;
     }
 
     #metric-hotel-resp-graph{
