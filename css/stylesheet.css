@@ -629,7 +629,7 @@ label #cancel{
     }
     #check:checked ~ #metric-hotel-resp-graph {
         position: relative;
-        margin-top: 27.0em;
+        margin-top: 30.0em;
         margin-left: 0.3em;
         width: 28.8em;
         height: 17.3em;
