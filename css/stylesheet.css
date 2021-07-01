@@ -562,6 +562,7 @@ label #cancel{
         width: 100%;
         margin-top: 1.5em;
         margin-left: 0.1em;
+        background-color: cadetblue;
     }
     #metric-rev-par-graph{
         position: relative;
@@ -570,12 +571,8 @@ label #cancel{
         
         width: 22.0em;
         height: 12.0em;
-        /*
-        width: 24.0em;
-        height: 13.0em;
-        */
+        
         overflow: hidden;
-        background-color: aqua;
     }
     
     #metric-revpar-canvas{
@@ -590,13 +587,8 @@ label #cancel{
         
         width: 22.0em;
         height: 12.0em;
-        /*
-        width: 24.0em;
-        height: 13.0em;
-        */
         
         overflow: hidden;
-        background-color: aqua;
 
     }
     #occ-metric-canvas{
@@ -612,10 +604,6 @@ label #cancel{
         width: 28.0em;
         height: 16.0em;
 
-        /*
-        width: 28.8em;
-        height: 17.3em;
-        */
         overflow: auto;
     }
     #metric-rev-resp-canvas{
