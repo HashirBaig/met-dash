@@ -70,10 +70,10 @@
     transition: all 0.8s ease;
 }
 #metric-occ-graph{
-    float: right;
+    float: left;
     width: 32.0em;
     margin-top: -17.0em;
-    margin-right: 4.0em;
+    margin-left: 38.9em;
     transition: all 0.8s ease;
 }
 #metric-revpar-canvas:hover{
@@ -426,11 +426,9 @@ label #cancel{
 }
 
 #check:checked ~ #metric-occ-graph{
-    margin-right: 13.75em;
+    margin-left: 29.1em;
     margin-top: 4.5em;
     transform: scale(1.2);
-    float: right;
-    display: flex;
 }
 
 #check:checked ~ #metric-hotel-resp-graph {
@@ -559,12 +557,12 @@ label #cancel{
         margin-left: 6.0em;
     }
     #metric-stats{
-        margin-left: 4.2em;
+        margin-left: 0.1em;
     }
     #metric-rev-par-graph{
         position: relative;
         margin-top: 0em;
-        margin-left: 2.6em;
+        margin-left: 0.3em;
         width: 24.0em;
         height: 14.0em;
     }
@@ -575,7 +573,7 @@ label #cancel{
     #metric-occ-graph{
         position: relative;
         margin-top: 1.6em;
-        margin-right: 2.4em;
+        margin-left: 0.3em;
         width: 24.0em;
         height: 14.0em;
     }
