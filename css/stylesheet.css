@@ -554,7 +554,7 @@ label #cancel{
 /*Media queries here*/
 @media screen and (max-width: 720px){ 
     #app_header{
-        margin-top: 2.0em;
+        margin-top: 1.45em;
         margin-left: 4.0em;
         font-size: 1.2em;
     }
@@ -579,8 +579,8 @@ label #cancel{
     }
     
     #metric-revpar-canvas{
-        width: 22.0em;
-        height: 11.0em;
+        width: 45.0em;
+        height: 35.0em;
     }
     
     #metric-occ-graph{
@@ -589,15 +589,19 @@ label #cancel{
         margin-left: 0.3em;
         
         width: 24.0em;
+        height: 12.0em;
+        /*
+        width: 24.0em;
         height: 13.0em;
+        */
         
-        overflow: auto;
+        overflow: hidden;
         background-color: aqua;
 
     }
     #occ-metric-canvas{
-        width: 100%;
-        height: 100%;
+        width: 23.0em;
+        height: 11.0em;
     }
 
     #metric-hotel-resp-graph{
@@ -605,15 +609,19 @@ label #cancel{
         margin-top: 17.15em;
         margin-left: 0.3em;
         
+        width: 28.0em;
+        height: 16.0em;
+
+        /*
         width: 28.8em;
         height: 17.3em;
-
+        */
         overflow: auto;
     }
     #metric-rev-resp-canvas{
-        width: 100%;
-        height: 100%;
+        margin-top: 3%;
     }
+
     /*Menu button-to-graphs CSS*/
     #check:checked ~ #metric-rev-par-graph {
         position: relative;
