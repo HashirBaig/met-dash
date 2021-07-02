@@ -18,13 +18,12 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 
 function cssForMainPage() {
-
     //Adding gradient to body of html page
-    
     $('body').css({
-        'background-color':'#DADADA',
+        //'background-color':'#ECECEC',
+        'background-image': 'url("graphics/bg.svg")',
+
     });
-    
 }
 
 //API Call - Review Score vs Hotel Resp Bool - Main Dashboard

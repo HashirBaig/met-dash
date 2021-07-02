@@ -7,7 +7,6 @@
     font-family: Microsoft PhagsPa;
     font-size: 1.5em;
 }
-
 /*CSS for metric MAIN dashboard page*/
 #metric-stats{
     margin-left: 5.35em;
@@ -22,6 +21,7 @@
     width: 0;
 }
 .metric-stats-item{
+    border-radius: 0.5em;
     background-color: #fff;
     margin-left: 0.6em;
     margin-top: 0.2em;
@@ -559,7 +559,7 @@ label #cancel{
         font-size: 1.2em;
     }
     #metric-stats{
-        width: 28.8em;
+        width: 30.0em;
         margin-top: 1.9em;
         margin-left: 0.1em;
     }

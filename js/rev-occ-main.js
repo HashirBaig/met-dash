@@ -1,14 +1,17 @@
-if ( ($('#rev-occ-main-all-pid').is(':checked') === false) ){
+document.addEventListener('DOMContentLoaded', function(){
+
+    if ( ($('#rev-occ-main-all-pid').is(':checked') === false) ){
         
-    //Main Page
-    $('#rev-occ-main-all-pid').prop('checked', true);
-    $('#rev-occ-main-pid-1').prop('checked', true);
-    $('#rev-occ-main-pid-2').prop('checked', true);
+        //Main Page
+        $('#rev-occ-main-all-pid').prop('checked', true);
+        $('#rev-occ-main-pid-1').prop('checked', true);
+        $('#rev-occ-main-pid-2').prop('checked', true);
+    }
 
     //Getting RevPar & Occ Main Data
     revOccMainAPICall();
+});
 
-}
 //API Call - RevPar vs Occ - Main Dashboard
 function revOccMainAPICall() {
     fetch('https://adevu-metric-dashboard.herokuapp.com/getRevOccMain')
@@ -735,8 +738,7 @@ function revOccMainGraph_Metric(rev, revpar, mon, adr, occ, avail, c) {
             datasets: occ_dataset
         },
         options: {
-            responsive: true,/*
-            maintainAspectRatio: false,*/
+            responsive: true,
             scales: {
                 yAxes: [{
                         id:"y-axis-1",
@@ -786,7 +788,7 @@ function revOccMainGraph_Metric(rev, revpar, mon, adr, occ, avail, c) {
             
         }
     });
-
+    
     //Rev vs Revpar Graph here
     revPar_v_Par_Graph_Metric = new Chart(revParCanvas_Metric, {
         type: 'bar',
@@ -795,8 +797,7 @@ function revOccMainGraph_Metric(rev, revpar, mon, adr, occ, avail, c) {
             datasets: dataset
         },
         options: { 
-            responsive: true,/*
-            maintainAspectRatio: false,*/
+            responsive: true,
             tooltips: {
                 mode: 'single',
                 callbacks: {
