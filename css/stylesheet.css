@@ -576,8 +576,8 @@ label #cancel{
     }
     
     #metric-revpar-canvas{
-        width: 35.0em;
-        height: 25.0em;
+        width: 40.0em;
+        height: 20.0em;
     }
     
     #metric-occ-graph{
@@ -592,13 +592,13 @@ label #cancel{
         backface-visibility: hidden;
     }
     #occ-metric-canvas{
-        width: 35.0em;
-        height: 25.0em;
+        width: 40.0em;
+        height: 20.0em;
     }
 
     #metric-hotel-resp-graph{
         position: relative;
-        margin-top: 14.0em;
+        margin-top: 12.0em;
         margin-left: 0.3em;
         
         width: 28.0em;
