@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', function(){
 function cssForMainPage() {
     //Adding gradient to body of html page
     $('body').css({
-        //'background-color':'#ECECEC',
-        'background-image': 'url("graphics/bg.svg")',
+        'background-color':'#D7D7D7',
+        //'background-image': 'url("graphics/bg.svg")',
 
     });
 }
