@@ -552,14 +552,14 @@ label #cancel{
     font-weight: bold;
 }
 /*Media queries here*/
-@media screen and (max-width: 720px){ 
+@media screen and (max-width: 480px){ 
     #app_header{
         margin-top: 1.45em;
         margin-left: 4.0em;
         font-size: 1.2em;
     }
     #metric-stats{
-        width: 26.0em;
+        width: 28.8em;
         margin-top: 1.9em;
         margin-left: 0.1em;
     }
@@ -576,8 +576,8 @@ label #cancel{
     }
     
     #metric-revpar-canvas{
-        width: 40.0em;
-        height: 20.0em;
+        width: 39.5em;
+        height: 19.5em;
     }
     
     #metric-occ-graph{
@@ -592,8 +592,8 @@ label #cancel{
         backface-visibility: hidden;
     }
     #occ-metric-canvas{
-        width: 40.0em;
-        height: 20.0em;
+        width: 39.5em;
+        height: 19.5em;
     }
 
     #metric-hotel-resp-graph{
@@ -622,7 +622,7 @@ label #cancel{
     #check:checked ~ #metric-occ-graph{
         position: relative;
         margin-top: 2.0em;
-        margin-right: 1.2em;
+        margin-left: 3.7em;
         width: 24.0em;
         height: 14.0em;
         transform: scale(1.0);
