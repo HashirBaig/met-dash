@@ -514,22 +514,44 @@ function revHotelRespGraph_Metric(rev_score, mon, resp_bool, c) {
     //Function to change arrays dynamically
     function loadData(first_mon, first_year, last_mon, last_year , mon_data, resp_bool_data, rev_score_data, mon_tmp_data, resp_bool_tmp_data, rev_score_tmp_data){
         
-        $("#rev-resp-main-metric-date").css({
-            'display':'none',
-        });
-        $("#rev-resp-main-amount").css({
-            'display':'block',
-            'float':'right',
-            'margin-top':'6px',
-            'margin-right':'-1px',
-        });
-        $("#rev-resp-main-label-amount").css({
-            'display':'none',
-        });
-        $("#rev-resp-main-tmp-date").css({
-            'display':'block',
-            'margin-right':'-33px',
-        });
+        if ( window.outerWidth === 480 ) {
+            $("#rev-resp-main-metric-date").css({
+                'display':'none',
+            });
+            $("#rev-resp-main-amount").css({
+                'display':'block',
+                'width': '6.0em',
+                'margin-top': '4.8em',
+                'margin-right': '1.5em',
+            });
+            $("#rev-resp-main-label-amount").css({
+                'display':'none',
+            });
+            $("#rev-resp-main-tmp-date").css({
+                'display':'block',
+                'margin-right':'-33px',
+            });
+
+        }else{
+            $("#rev-resp-main-metric-date").css({
+                'display':'none',
+            });
+            $("#rev-resp-main-amount").css({
+                'display':'block',
+                'float':'right',
+                'margin-top':'6px',
+                'margin-right':'-1px',
+            });
+            $("#rev-resp-main-label-amount").css({
+                'display':'none',
+            });
+            $("#rev-resp-main-tmp-date").css({
+                'display':'block',
+                'margin-right':'-33px',
+            });
+        }
+        
+        
         
         let point_1; let point_2;
 

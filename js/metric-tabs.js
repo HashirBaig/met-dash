@@ -281,7 +281,7 @@ function loadMetricData(data) {
                 $('#adr-val').css({
                     'color':'#FC6847',
                 });
-                $('#metric-revpar').css({
+                $('#metric-adr').css({
                     'background-color':'#FFEBE7',
                 });
                 $('.triangle-adr-up').css({

@@ -321,6 +321,7 @@
     height: 100%;
     background: #042331;
     transition: all 0.4s ease;
+    opacity: 0.9;
 }
 .sidebar header{
     font-size: 1.4em;
@@ -569,7 +570,7 @@ label #cancel{
         margin-left: 0.3em;
         
         width: 23.5em;
-        height: 12.0em;
+        height: 12.0.0em;
     }
     
     #metric-occ-graph{
@@ -578,7 +579,7 @@ label #cancel{
         margin-left: 0.3em;
         
         width: 23.5em;
-        height: 12.0em;
+        height: 12.0.0em;
     }
     
     #metric-hotel-resp-graph{
@@ -589,6 +590,43 @@ label #cancel{
         width: 28.0em;
         height: 16.0em;
     }
+    /*Mobile Device - CSS for property and date filters*/
+    #rev-resp-pid-filter{
+        display: block;
+        margin-right: -7.8em;
+        margin-top: 28.0em;
+    }
+    #rev-resp-main-metric-date{
+        display: block;
+        margin-right: -14.5em;
+        margin-top: 40.0em;
+    }
+    #rev-resp-main-amount{
+        display: block;
+    }
+    #rev-resp-main-slider-range{
+        width: 6.0em;
+        margin-top: 35.5em;
+        margin-right: -10.5em;
+    }
+
+    #rev-occ-pid-filter{
+        display: block;
+        margin-right: -0.3em;
+    }
+    #rev-occ-main-metric-date{
+        display: block;
+        margin-right: -9.1em;
+    }
+    #rev-occ-main-amount{
+        display: block;
+    }
+    #rev-occ-main-slider-range{
+        margin-top: 12.5em;
+        width: 6.0em;
+        margin-right: -6.2em;
+    }
+
 
     /*Menu button-to-graphs CSS*/
     #check:checked ~ #metric-rev-par-graph {
@@ -658,7 +696,7 @@ label #cancel{
         height: 14.0em !important;
     }
     
-    #rev-par-control-panel, #rev-resp-control-panel, #occ-control-panel, #rev-occ-pid-filter, #rev-occ-main-date, #rev-occ-main-tmp-date, #rev-occ-main-metric-date, #rev-occ-main-slider-range, #rev-resp-pid-filter, #rev-resp-main-date, #rev-resp-main-tmp-date, #rev-resp-main-metric-date, #rev-resp-main-slider-range{
+    #rev-par-control-panel, #rev-resp-control-panel, #occ-control-panel{
         display: none;
     }
     
