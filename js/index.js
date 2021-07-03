@@ -21,8 +21,6 @@ function cssForMainPage() {
     //Adding gradient to body of html page
     $('body').css({
         'background-color':'#D7D7D7',
-        //'background-image': 'url("graphics/bg.svg")',
-
     });
 }
 

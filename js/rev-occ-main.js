@@ -787,8 +787,7 @@ function revOccMainGraph_Metric(rev, revpar, mon, adr, occ, avail, c) {
             },
             
         }
-    });
-    
+    }); 
     //Rev vs Revpar Graph here
     revPar_v_Par_Graph_Metric = new Chart(revParCanvas_Metric, {
         type: 'bar',
@@ -865,6 +864,135 @@ function revOccMainGraph_Metric(rev, revpar, mon, adr, occ, avail, c) {
         revPar_v_Par_Graph_Metric.destroy();
         occ_v_Avail_Graph_Metric.destroy();
     }
+
+    //Occ vs Avail Graph here
+    occ_v_Avail_Graph_Metric = new Chart(occCanvas_Metric, {
+        type: 'line',
+        data: {
+            labels: mon_data,
+            datasets: occ_dataset
+        },
+        options: {
+            responsive: true,
+            scales: {
+                yAxes: [{
+                        id:"y-axis-1",
+                        position:'left',
+                        type: 'linear',
+                        ticks: {
+                            beginAtZero:true
+                        },
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Avg. Occupancy %',
+                            fontSize: 12,
+                            fontStyle: "bold",
+                        }
+                    }, {
+                        id:"y-axis-2",
+                        position:'right',
+                        type: 'linear',
+                        scaleOverride: true,
+                        scaleSteps: 10,
+                        ticks: {
+                            beginAtZero:true
+                        },
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Avg. Available Rooms',
+                            fontSize: 12,
+                            fontStyle: "bold",
+                        }
+                }],
+                xAxes : [{
+                    ticks: {
+                        display: true,
+                    },
+                    barPercentage: 1.1,
+                    gridLines : {
+                        display : false
+                    },
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Month of Date',
+                        fontStyle: "bold",
+                        fontSize: 15,
+                    }
+                }]
+            },
+            
+        }
+    }); 
+    //Rev vs Revpar Graph here
+    revPar_v_Par_Graph_Metric = new Chart(revParCanvas_Metric, {
+        type: 'bar',
+        data: {
+            labels: mon_data,
+            datasets: dataset
+        },
+        options: { 
+            responsive: true,
+            tooltips: {
+                mode: 'single',
+                callbacks: {
+                    afterLabel: function(tooltipItem, data) {
+                        const adrevpar = addon.data[tooltipItem['index']]
+                        return 'Avg. RevPar: ' + adrevpar;
+                    }	
+                }
+            },
+            scales: {
+                yAxes: [{
+                    id:"y-axis-1",
+                    position:'left',
+                    type: 'linear',
+                    ticks: {
+                        beginAtZero:true,
+                        callback: function(label, index, labels){
+                            return label/1000+'k';
+                        },
+                    },
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Revenue',
+                        fontStyle: "bold",
+                        fontSize: 12,
+                    }
+                    }, {
+                        id:"y-axis-2",
+                        position:'right',
+                        type: 'linear',
+                        scaleOverride: true,
+                        scaleSteps: 10,
+                        ticks: {
+                            beginAtZero:true
+                        },
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Avg. ADR',
+                            fontStyle: "bold",
+                            fontSize: 12,
+                        }
+                }],
+                xAxes : [{
+                    ticks: {
+                        display: true
+                    },
+                    barPercentage: 1.1,
+                    gridLines : {
+                        display : false
+                    },
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Month of Date',
+                        fontStyle: "bold",
+                        fontSize: 15,
+                    }
+                }]
+            },
+            
+        }
+    });
 
     //Updating graphs here
     if (c === 1) {

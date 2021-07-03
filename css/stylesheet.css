@@ -568,16 +568,8 @@ label #cancel{
         margin-top: 0.9em;
         margin-left: 0.3em;
         
-        width: 20.0em;
-        height: 10.0em;
-        
-        backface-visibility: hidden;
-        overflow: hidden;
-    }
-    
-    #metric-revpar-canvas{
-        width: 39.5em;
-        height: 19.5em;
+        width: 23.5em;
+        height: 12.0em;
     }
     
     #metric-occ-graph{
@@ -585,29 +577,17 @@ label #cancel{
         margin-top: 1.0em;
         margin-left: 0.3em;
         
-        width: 20.0em;
-        height: 10.0em;
-        
-        overflow: hidden;
-        backface-visibility: hidden;
+        width: 23.5em;
+        height: 12.0em;
     }
-    #occ-metric-canvas{
-        width: 39.5em;
-        height: 19.5em;
-    }
-
+    
     #metric-hotel-resp-graph{
         position: relative;
-        margin-top: 12.0em;
+        margin-top: 14.0em;
         margin-left: 0.3em;
         
         width: 28.0em;
         height: 16.0em;
-
-        overflow: auto;
-    }
-    #metric-rev-resp-canvas{
-        margin-top: 3%;
     }
 
     /*Menu button-to-graphs CSS*/

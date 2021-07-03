@@ -477,6 +477,7 @@ function revParVRevGraph(rev, revpar, mon, adr, c) {
         dataset.push(adrDataset);
 
         if (c === 1) {
+            //Destroy called
             revPar_v_Par_Graph.destroy();
         }
 
@@ -549,7 +550,7 @@ function revParVRevGraph(rev, revpar, mon, adr, c) {
             }
         });
         if (c === 1) {
-            console.log('destroy called');
+            //Update called
             revPar_v_Par_Graph.update();
         }
 
