@@ -622,24 +622,47 @@ function revOccMainGraph_Metric(rev, revpar, mon, adr, occ, avail, c) {
     //Function to change arrays dynamically
     function loadData(point_1,point_2, mon_data, adr_data, rev_data, revpar_data, occ_data, avail_data, mon_tmp_data, adr_tmp_data, rev_tmp_data, revpar_tmp_data, occ_tmp_data, avail_tmp_data){
 
-        $('#rev-resp-main-tmp-date').css({
-            'display':'none',
-        });
-        $('#rev-occ-main-metric-date').css({
-            'display':'none',
-        });
+        if ( window.outerWidth <= 480 ) {
+            $('#rev-occ-main-label-amount').css({
+                'display':'block',
+                'margin-top':'0.0em',
+                'margin-right':'0.0em',
+            });
+            $('#rev-occ-main-amount').css({
+                'display':'block',
+                'width':'10.0em',
+                'margin-top':'-0.4em',//prev = 12px
+                'margin-right':'-3.1em',
+                'font-weight':'bold',
+            });
 
-        $('#rev-occ-main-date').css({
-            'float':'right',
-            'margin-top':'119px', //prev = 80px
-            'margin-right':'-175px',
-        });
-        
-        $('#rev-occ-main-amount').css({
-            'display':'block',
-            'margin-top':'12px',//prev = 12px
-            'font-weight':'bold',
-        });
+            $('#rev-resp-main-tmp-date').css({
+                'display':'none',
+            });
+            $('#rev-occ-main-metric-date').css({
+                'display':'none',
+            });
+
+        }else{
+            $('#rev-resp-main-tmp-date').css({
+                'display':'none',
+            });
+            $('#rev-occ-main-metric-date').css({
+                'display':'none',
+            });
+    
+            $('#rev-occ-main-date').css({
+                'float':'right',
+                'margin-top':'119px', //prev = 80px
+                'margin-right':'-175px',
+            });
+            
+            $('#rev-occ-main-amount').css({
+                'display':'block',
+                'margin-top':'12px',//prev = 12px
+                'font-weight':'bold',
+            });
+        }
 
         while(mon_data.length > 0){
             rev_data.pop();

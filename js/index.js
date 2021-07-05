@@ -514,22 +514,33 @@ function revHotelRespGraph_Metric(rev_score, mon, resp_bool, c) {
     //Function to change arrays dynamically
     function loadData(first_mon, first_year, last_mon, last_year , mon_data, resp_bool_data, rev_score_data, mon_tmp_data, resp_bool_tmp_data, rev_score_tmp_data){
         
-        if ( window.outerWidth === 480 ) {
+        if ( window.outerWidth <= 480 ) {
+            $("#rev-resp-pid-filter").css({
+                'display':'block',
+                'margin-right':'-9.0em',
+                'margin-top':'28.0em',
+            });
             $("#rev-resp-main-metric-date").css({
                 'display':'none',
             });
             $("#rev-resp-main-amount").css({
                 'display':'block',
-                'width': '6.0em',
-                'margin-top': '4.8em',
-                'margin-right': '1.5em',
+                'width': '9.8em',
+                'margin-top': '7.2em',
+                'margin-right': '-3.7em',
             });
             $("#rev-resp-main-label-amount").css({
                 'display':'none',
             });
             $("#rev-resp-main-tmp-date").css({
                 'display':'block',
-                'margin-right':'-33px',
+                'margin-right':'-7.5em',
+                'margin-top':'33.7em'
+            });
+            $("#rev-resp-main-slider-range").css({
+                'display':'block',
+                'margin-right':'-11.7em',
+                'margin-top':'37.7em'
             });
 
         }else{

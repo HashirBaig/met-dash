@@ -54,15 +54,6 @@
 #metric-rating:hover{
     filter: drop-shadow(00.2em 00.2em 00.3em #a7a7a7);
 }
-/*
-.metric-graph{
-    margin-top: 11.6em;
-    height: 0.4em;
-    width: 0.4em;
-    background-color: aqua;
-    transition: all 0.8s ease;
-}
-*/
 #metric-rev-par-graph{
     margin-top: 1.0em;
     margin-left: 4.5em;
@@ -97,15 +88,6 @@
     margin-top: 1.0em;
     transition: all 0.4s ease;
 }
-/*
-#metric-rev-resp-canvas{
-    margin-top: 25px;
-    height: 500px !important; 
-    width: 93% !important;
-    margin-left: 40px;
-    transition: all 2.0s ease;
-}
-*/
 /*CSS for Stats bar*/
 .val-adr{
     float: left;
@@ -171,7 +153,7 @@
     float: right;
     width: 120px;
     margin-right: -125px;
-    margin-top: 506px; /*Prev = 499*/
+    margin-top: 506px;
 }
 
 /*CSS for main dashboard - Rev & Occ*/
@@ -492,7 +474,7 @@ label #cancel{
     
     #metric-hotel-resp-graph{
         position: relative;
-        margin-top: 14.0em;
+        margin-top: 14.8em;
         margin-left: 0.3em;
         
         width: 28.0em;
@@ -501,30 +483,40 @@ label #cancel{
     /*Mobile Device - CSS for property and date filters*/
     #rev-resp-pid-filter{
         display: block;
-        margin-right: -7.8em;
+        margin-right: -9.8em;
         margin-top: 28.0em;
+    }
+    #rev-resp-main-label-amount{
+        display: block;
+        margin-top: 6.2em;
+        margin-right: 2.6em;
     }
     #rev-resp-main-metric-date{
         display: block;
-        margin-right: -14.5em;
-        margin-top: 40.0em;
+        margin-right: -16.5em;
+        margin-top: 42.0em;
     }
     #rev-resp-main-amount{
         display: block;
     }
     #rev-resp-main-slider-range{
         width: 6.0em;
-        margin-top: 35.5em;
-        margin-right: -10.5em;
+        margin-top: 37.5em;
+        margin-right: -12.5em;
     }
-
+    /*rev occ main property and date filter*/
     #rev-occ-pid-filter{
         display: block;
-        margin-right: -0.3em;
+        margin-right: -5.2em;
+    }
+    #rev-occ-main-label-amount{
+        display: block;
+        margin-top: 0.0em;
+        margin-right: 4.1em;
     }
     #rev-occ-main-metric-date{
         display: block;
-        margin-right: -9.1em;
+        margin-right: -11.1em;
     }
     #rev-occ-main-amount{
         display: block;
@@ -532,10 +524,8 @@ label #cancel{
     #rev-occ-main-slider-range{
         margin-top: 12.5em;
         width: 6.0em;
-        margin-right: -6.2em;
+        margin-right: -8.2em;
     }
-
-
     /*Menu button-to-graphs CSS*/
     #check:checked ~ #metric-rev-par-graph {
         position: relative;
@@ -560,7 +550,6 @@ label #cancel{
         width: 20.0em;
         height: 17.3em;
     }
-
     /*Non Metric Graphs*/
     .graph-title{
         margin-left: 4.8em;
