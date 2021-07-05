@@ -459,7 +459,7 @@ label #cancel{
         margin-top: 0.9em;
         margin-left: 0.3em;
         
-        width: 23.5em;
+        width: 24.0em;
         height: 12.0.0em;
     }
     
@@ -468,7 +468,7 @@ label #cancel{
         margin-top: 1.0em;
         margin-left: 0.3em;
         
-        width: 23.5em;
+        width: 24.0em;
         height: 12.0.0em;
     }
     
@@ -507,16 +507,16 @@ label #cancel{
     /*rev occ main property and date filter*/
     #rev-occ-pid-filter{
         display: block;
-        margin-right: -5.2em;
+        margin-right: -9.8em; /*+(-1.0),*/
     }
     #rev-occ-main-label-amount{
         display: block;
         margin-top: 0.0em;
-        margin-right: 4.1em;
+        margin-right: -0.5em; /*-1.0,*/
     }
     #rev-occ-main-metric-date{
         display: block;
-        margin-right: -11.1em;
+        margin-right: -16.6em; /*+(-1.0)*/
     }
     #rev-occ-main-amount{
         display: block;
@@ -524,7 +524,7 @@ label #cancel{
     #rev-occ-main-slider-range{
         margin-top: 12.5em;
         width: 6.0em;
-        margin-right: -8.2em;
+        margin-right: -12.65em; /*+(-1.0)*/
     }
     /*Menu button-to-graphs CSS*/
     #check:checked ~ #metric-rev-par-graph {
@@ -566,20 +566,12 @@ label #cancel{
         width: 24.0em;
         height: 14.0em;
     }
-    #revpar-canvas{
-        width: 24.0em !important;
-        height: 14.0em !important;
-    }
     #check:checked ~ #metric-hotel-resp-graph {
         position: relative;
         margin-top: 17.15em;
         margin-left: 0.3em;
         width: 28.8em;
         height: 17.3em;
-    }
-    #rev-resp-canvas{
-        width: 24.0em !important;
-        height: 14.0em !important;
     }
     #check:checked ~ #occ-graph{
         position: relative;
@@ -588,11 +580,6 @@ label #cancel{
         width: 24.0em;
         height: 14.0em;
     }
-    #occ-canvas{
-        width: 24.0em !important;
-        height: 14.0em !important;
-    }
-    
     #rev-par-control-panel, #rev-resp-control-panel, #occ-control-panel{
         display: none;
     }
