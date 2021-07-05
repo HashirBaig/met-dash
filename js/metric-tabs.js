@@ -30,10 +30,7 @@ function loadAvailMetricData(data) {
             $('#avail-val').css({
                 'color':'darkgray',
             });
-            $('.triangle-avail-up').css({
-                'display' : 'none',
-            });
-            $('.triangle-avail-down').css({
+            $('.triangle-avail').css({
                 'display' : 'none',
             });
             $('.val-avail').css({
@@ -56,16 +53,13 @@ function loadAvailMetricData(data) {
                 $('#avail-val').css({
                     'color':'#7BE15F',
                 });
-                $('.triangle-avail-up').css({
+                $('.triangle-avail').css({
                     'width': '0',
                     'height': '0',
                     'border-left': '9px solid transparent',
                     'border-right': '9px solid transparent',
                     'border-bottom': '18px solid #7BE15F',
                     'margin-left': '41px',
-                });
-                $('.triangle-avail-down').css({
-                    'display' : 'none',
                 });
             }); 
         }else if (rslt_avail<0){
@@ -77,10 +71,7 @@ function loadAvailMetricData(data) {
                 $('#metric-avail').css({
                     'background-color':'#FFEBE7',
                 });
-                $('.triangle-avail-up').css({
-                    'display' : 'none',
-                });
-                $('.triangle-avail-down').css({
+                $('.triangle-avail').css({
                     'width': '0',
                     'height': '0',
                     'border-left': '9px solid transparent',
@@ -95,12 +86,9 @@ function loadAvailMetricData(data) {
                 $('#avail-val').css({
                     'color':'darkgray',
                 });
-                $('.triangle-avail-up').css({
+                $('.triangle-avail').css({
                     'display' : 'none',
                 });
-                $('.triangle-avail-down').css({
-                    'display' : 'none',
-                });  
             });
         }
     }
@@ -124,10 +112,7 @@ function loadRatingMetricData(data) {
             $('#rating-val').css({
                 'color':'darkgray',
             });
-            $('.triangle-rating-up').css({
-                'display' : 'none',
-            });
-            $('.triangle-rating-down').css({
+            $('.triangle-rating').css({
                 'display' : 'none',
             });
             $('.val-rating').css({
@@ -155,7 +140,7 @@ function loadRatingMetricData(data) {
                 $('#rating-val').css({
                     'color':'#7BE15F',
                 });
-                $('.triangle-rating-up').css({
+                $('.triangle-rating').css({
                     'width': '0',
                     'height': '0',
                     'border-left': '9px solid transparent',
@@ -163,9 +148,6 @@ function loadRatingMetricData(data) {
                     'border-bottom': '18px solid #7BE15F',
                     'margin-left': '41px',
                 });
-                $('.triangle-rating-down').css({
-                    'display': 'none',
-                }); 
             }); 
         }else if (rslt_rating<0){
             //p_adr.fontcolor("#FC6847");//#FC6847 - light red
@@ -176,10 +158,7 @@ function loadRatingMetricData(data) {
                 $('#metric-rating').css({
                     'background-color':'#FFEBE7',
                 });
-                $('.triangle-rating-up').css({
-                    'display': 'none',
-                });
-                $('.triangle-rating-down').css({
+                $('.triangle-rating').css({
                     'width': '0',
                     'height': '0',
                     'border-left': '9px solid transparent',
@@ -213,10 +192,7 @@ function loadMetricData(data) {
             $('#adr-val').css({
                 'color':'darkgray',
             });
-            $('.triangle-adr-up').css({
-                'display' : 'none',
-            });
-            $('.triangle-adr-down').css({
+            $('.triangle-adr').css({
                 'display' : 'none',
             });
             $('.val-adr').css({
@@ -230,10 +206,7 @@ function loadMetricData(data) {
             $('#revpar-val').css({
                 'color':'darkgray',
             });
-            $('.triangle-revpar-up').css({
-                'display' : 'none',
-            });
-            $('.triangle-revpar-down').css({
+            $('.triangle-revpar').css({
                 'display' : 'none',
             });
             $('.val-revpar').css({
@@ -263,16 +236,13 @@ function loadMetricData(data) {
                 $('#adr-val').css({
                     'color':'#7BE15F',
                 });
-                $('.triangle-adr-up').css({
+                $('.triangle-adr').css({
                     'width': '0',
                     'height': '0',
                     'border-left': '9px solid transparent',
                     'border-right': '9px solid transparent',
                     'border-bottom': '18px solid #7BE15F',
                     'margin-left': '41px',
-                });
-                $('.triangle-adr-down').css({
-                    'display': 'none',
                 });
             }); 
         }else if (rslt_adr<0){
@@ -284,17 +254,14 @@ function loadMetricData(data) {
                 $('#metric-adr').css({
                     'background-color':'#FFEBE7',
                 });
-                $('.triangle-adr-up').css({
-                    'display': 'none',
-                });
-                $('.triangle-adr-down').css({
+                $('.triangle-adr').css({
                     'width': '0',
                     'height': '0',
                     'border-left': '9px solid transparent',
                     'border-right': '9px solid transparent',
                     'border-top': '18px solid #FC6847',
                     'margin-left': '41px',
-                });  
+                });
             }); 
         }else{
             document.getElementById('adr-val').innerHTML = 0 + '%';
@@ -302,12 +269,9 @@ function loadMetricData(data) {
                 $('#adr-val').css({
                     'color':'darkgray',
                 });
-                $('.triangle-adr-up').css({
+                $('.triangle-adr').css({
                     'display' : 'none',
-                });
-                $('.triangle-adr-down').css({
-                    'display' : 'none',
-                });  
+                }); 
             });
         }
     
@@ -317,7 +281,7 @@ function loadMetricData(data) {
                 $('#revpar-val').css({
                     'color':'#7BE15F',
                 });
-                $('.triangle-revpar-up').css({
+                $('.triangle-revpar').css({
                     'width': '0',
                     'height': '0',
                     'border-left': '9px solid transparent',
@@ -325,9 +289,6 @@ function loadMetricData(data) {
                     'border-bottom': '18px solid #7BE15F',
                     'margin-left': '41px',
                 });
-                $('.triangle-revpar-down').css({
-                    'display': 'none',
-                });  
             }); 
         }else if (rslt_revpar<0){
 
@@ -338,10 +299,7 @@ function loadMetricData(data) {
                 $('#metric-revpar').css({
                     'background-color':'#FFEBE7',
                 });
-                $('.triangle-revpar-up').css({
-                    'display': 'none',
-                });
-                $('.triangle-revpar-down').css({
+                $('.triangle-revpar').css({
                     'width': '0',
                     'height': '0',
                     'border-left': '9px solid transparent',
@@ -356,12 +314,9 @@ function loadMetricData(data) {
                 $('#revpar-val').css({
                     'color':'darkgray',
                 });
-                $('.triangle-revpar-up').css({
+                $('.triangle-revpar').css({
                     'display' : 'none',
                 });
-                $('.triangle-revpar-down').css({
-                    'display' : 'none',
-                }); 
             });
         }
     }
@@ -386,10 +341,7 @@ function loadOccMetric(data) {
             $('#occ-val').css({
                 'color':'darkgray',
             });
-            $('.triangle-occ-up').css({
-                'display' : 'none',
-            });
-            $('.triangle-occ-down').css({
+            $('.triangle-occ').css({
                 'display' : 'none',
             });
             $('.val-occ').css({
@@ -410,16 +362,13 @@ function loadOccMetric(data) {
                 $('#occ-val').css({
                     'color':'#7BE15F',
                 });
-                $('.triangle-occ-up').css({
+                $('.triangle-occ').css({
                     'width': '0',
                     'height': '0',
                     'border-left': '9px solid transparent',
                     'border-right': '9px solid transparent',
                     'border-bottom': '18px solid #7BE15F',
                     'margin-left': '41px',
-                });
-                $('.triangle-occ-down').css({
-                    'display': 'none',
                 });
             }); 
         }else if (rslt_occ<0){
@@ -431,10 +380,7 @@ function loadOccMetric(data) {
                 $('#metric-occ').css({
                     'background-color':'#FFEBE7',
                 });
-                $('.triangle-occ-up').css({
-                    'display': 'none',
-                });
-                $('.triangle-occ-down').css({
+                $('.triangle-occ').css({
                     'width': '0',
                     'height': '0',
                     'border-left': '9px solid transparent',
@@ -449,10 +395,7 @@ function loadOccMetric(data) {
                 $('#occ-val').css({
                     'color':'darkgray',
                 });
-                $('.triangle-occ-up').css({
-                    'display' : 'none',
-                });
-                $('.triangle-occ-down').css({
+                $('.triangle-occ').css({
                     'display' : 'none',
                 });
             });
