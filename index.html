@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
     
     <link rel="stylesheet" href="css/jquery-ui.css">
-    <!--https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css-->
-    <!--https://code.jquery.com/ui/1.12.1/jquery-ui.js-->
-    <!--https://kit.fontawesome.com/a076d05399.js-->
     <link rel="stylesheet" href="css/stylesheet.css"/>
     <title>Metric Dashboard</title>
 </head>
@@ -15,19 +12,18 @@
 <body>
 
     <input type="checkbox" id="check">
-    <label for="check">
-        <i class="fas fa-bars" id="btn"></i>
-        <i class="fas fa-arrow-circle-left" id="cancel"></i>
+    
+    <label for="check" id="check__label">
+        <i class="fab fa-accusoft" id="btn"></i>
     </label>
 
     <div class="sidebar">
-        <header>Hotel Dash</header>
-
+        <!-- <header><i class="fab fa-accusoft"></i></header>-->
         <ul class="nav-btn-list">
-            <li><button id="metric-btn"           > <i class="fas fa-qrcode">     </i>  Metrics          </button> </li>
-            <li><button id="revpar-v-rev-btn"     > <i class="fas fa-chart-line"> </i>  RevPar v Rev     </button> </li>
-            <li><button id="rev-v-hotel-resp-btn" > <i class="fas fa-hotel">      </i>  Rev v Hotel Resp </button> </li>
-            <li><button id="occ-v-avail-btn"      > <i class="fas fa-bed">        </i>  Occ % v Avail    </button> </li>
+            <li><button id="metric-btn"                                              > <i class="fas fa-qrcode">     </i> </button> </li>
+            <li><button id="revpar-v-rev-btn"     onclick="revParAPICall__03()"      > <i class="fas fa-chart-line"> </i> </button> </li>
+            <li><button id="rev-v-hotel-resp-btn" onclick="revHotelRespAPICall__03()"> <i class="fas fa-hotel">      </i> </button> </li>
+            <li><button id="occ-v-avail-btn"      onclick="occAvailAPICall__03()"    > <i class="fas fa-bed">        </i> </button> </li>
         </ul>
 
     </div>
@@ -119,49 +115,19 @@
         <label id="rev-occ-main-p2-label" for="rev-occ-main-pid-2" class="rev-occ-main-label">2</label> <br>
 
     </div>
-
-    
-    <div id="rev-occ-main-date">
-        <p>
-            <label id="rev-occ-main-label-amount" for="rev-occ-main-amount">Date</label> <br>
-            <input type="text" id="rev-occ-main-amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
-        </p>
+    <div class="date__filter__title">
+        <span>Filter by Date</span>
     </div>
 
-    <p id="rev-occ-main-tmp-date">Date</p>
-    <p id="rev-occ-main-metric-date"></p>
-
-    <div id="rev-occ-main-slider-range"></div>
-    
-
-    <!--Property Filter - Review Score & Hotel Resp Bool - Main Dashboard-->
-    <div id="rev-resp-pid-filter">
-            
-        <label>Id</label> <br>
-        <input type="checkbox" id="rev-resp-main-all-pid" value="*">
-        <label id="rev-resp-main-all-label" for="rev-resp-main-all-pid" class="rev-resp-main-label">(All)</label> <br>
-
-        <input type="checkbox" id="rev-resp-main-pid-1" value="1">
-        <label id="rev-resp-main-p1-label" for="rev-resp-main-pid-1" class="rev-resp-main-label">1</label> <br>
-
-        <input type="checkbox" id="rev-resp-main-pid-2" value="2">
-        <label id="rev-resp-main-p2-label" for="rev-resp-main-pid-2" class="rev-resp-main-label">2</label> <br>
-
+    <div class="dropdown__date">
+        <button class="dropdown__hover"> <span id="dd__hover__span">Last 3 Months (Default)</span> </button>
+        <div class="dropdown__menu">
+            <button class="menu__item" id="menu__item__btn__1" onclick="revRespMainAPICall__03()"> <span id="mt__1__span">Last 3 Months</span> </button>
+            <button class="menu__item" id="menu__item__btn__2" onclick="revRespMainAPICall__06()"> <span id="mt__2__span">Last 6 Months</span> </button>
+            <button class="menu__item" id="menu__item__btn__3" onclick="revRespMainAPICall__ThisYear()"> <span id="mt__3__span">This Year</span> </button>
+            <button class="menu__item" id="menu__item__btn__4" onclick="revRespMainAPICall__2020()"> <span id="mt__4__span">2020</span> </button>
+        </div>
     </div>
-
-    <div id="rev-resp-main-date">
-        <p>
-            <label id="rev-resp-main-label-amount" for="rev-resp-main-amount">Date</label> <br>
-            <input type="text" id="rev-resp-main-amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
-        </p>
-    </div>
-    
-    <p id="rev-resp-main-tmp-date">Date</p>
-    <p id="rev-resp-main-metric-date"></p>
-    
-
-    <div id="rev-resp-main-slider-range"></div>
-
 
     <!--Rev Par Graph-->
     <div id="metric-rev-par-graph" class="metric-graph">
@@ -182,62 +148,76 @@
     <!--Container 2-->
     <div id="rev-par-container" class="revpar-graph-container">
         <h2 class="graph-title">RevPar vs Rev</h2>
-                        
-        <!--Graph div-->
-        <div id="rev-par-graph">
-            <canvas id="revpar-canvas"></canvas>
-        </div>
-            
-        <!--Control Panel-->
-        <div id="rev-par-control-panel">
+        
+        <div id="revpar-pid-filter">
             
             <label>Id</label> <br>
             <input type="checkbox" id="revpar-all-pid" value="*">
             <label id="revpar-all-label" for="revpar-all-pid" class="revpar-label">(All)</label> <br>
-
+    
             <input type="checkbox" id="revpar-pid-1" value="1">
             <label id="revpar-p1-label" for="revpar-pid-1" class="revpar-label">1</label> <br>
-
+    
             <input type="checkbox" id="revpar-pid-2" value="2">
             <label id="revpar-p2-label" for="revpar-pid-2" class="revpar-label">2</label> <br>
-
-            <p>
-                <label for="amount">Date (Drag to customize view)</label> <br>
-                <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
-            </p>
-            <p id="rev-par-date"></p>
-            <div id="rev-par-slider-range"></div>
+    
         </div>
+
+        <div class="revpar__date__filter__title">
+            <span>Filter by Date</span>
+        </div>
+    
+        <div class="revpar__dropdown__date">
+            <button class="revpar__dropdown__hover"> <span id="revpar__dd__hover__span">Last 3 Months (Default)</span> </button>
+            <div class="revpar__dropdown__menu">
+                <button class="revpar__menu__item" id="revpar__menu__item__btn__1" onclick="revParAPICall__03()">       <span id="revpar__mt__1__span">Last 3 Months</span> </button>
+                <button class="revpar__menu__item" id="revpar__menu__item__btn__2" onclick="revParAPICall__06()">       <span id="revpar__mt__2__span">Last 6 Months</span> </button>
+                <button class="revpar__menu__item" id="revpar__menu__item__btn__3" onclick="revParAPICall__ThisYear()"> <span id="revpar__mt__3__span">This Year</span>     </button>
+                <button class="revpar__menu__item" id="revpar__menu__item__btn__4" onclick="revParAPICall__2020()">     <span id="revpar__mt__4__span">2020</span>          </button>
+            </div>
+        </div>
+
+        <!--Graph div-->
+        <div id="rev-par-graph">
+            <canvas id="revpar-canvas"></canvas>
+        </div>
+
     </div>
     <!--Container 3-->
-    <div id="rev-resp-container">
-        <h2 class="rev-resp-graph-title">Review vs Hotel Response</h2>
+    <div id="revresp-container">
+        <h2 class="revresp-graph-title">Review vs Hotel Response</h2>
+
+        <div id="revresp-pid-filter">
+            
+            <label>Id</label> <br>
+            <input type="checkbox" id="revresp-all-pid" value="*">
+            <label id="revresp-all-label" for="revresp-all-pid" class="revresp-label">(All)</label> <br>
+    
+            <input type="checkbox" id="revresp-pid-1" value="1">
+            <label id="revresp-p1-label" for="revresp-pid-1" class="revresp-label">1</label> <br>
+    
+            <input type="checkbox" id="revresp-pid-2" value="2">
+            <label id="revresp-p2-label" for="revresp-pid-2" class="revresp-label">2</label> <br>
+    
+        </div>
+
+        <div class="revresp__date__filter__title">
+            <span>Filter by Date</span>
+        </div>
+    
+        <div class="revresp__dropdown__date">
+            <button class="revresp__dropdown__hover"> <span id="revresp__dd__hover__span">Last 3 Months (Default)</span> </button>
+            <div class="revresp__dropdown__menu">
+                <button class="revresp__menu__item" id="revresp__menu__item__btn__1" onclick="revHotelRespAPICall__03()">       <span id="revresp__mt__1__span">Last 3 Months</span> </button>
+                <button class="revresp__menu__item" id="revresp__menu__item__btn__2" onclick="revHotelRespAPICall__06()">       <span id="revresp__mt__2__span">Last 6 Months</span> </button>
+                <button class="revresp__menu__item" id="revresp__menu__item__btn__3" onclick="revHotelRespAPICall__ThisYear()"> <span id="revresp__mt__3__span">This Year</span>     </button>
+                <button class="revresp__menu__item" id="revresp__menu__item__btn__4" onclick="revHotelRespAPICall__2020()">     <span id="revresp__mt__4__span">2020</span>          </button>
+            </div>
+        </div>
         
         <!--Graph div-->
-        <div id="rev-resp-graph">
+        <div id="revresp-graph">
             <canvas id="rev-resp-canvas"></canvas>
-        </div>
-            
-        <!--Control Panel-->  
-        <div id="rev-resp-control-panel">
-
-            <label>Id</label> <br>
-            <input type="checkbox" id="rev-resp-all-pid" value="*">
-            <label id="rev-resp-all-label" for="rev-resp-all-pid" class="rev-resp-label">(All)</label> <br>
-
-            <input type="checkbox" id="rev-resp-pid-1" value="1">
-            <label id="rev-resp-p1-label" for="revpar-pid-1" class="rev-resp-label">1</label> <br>
-
-            <input type="checkbox" id="rev-resp-pid-2" value="2">
-            <label id="rev-resp-p2-label" for="revpar-pid-2" class="rev-resp-label">2</label> <br>
-        
-            <p>
-              <label for="rev-resp-amount">Date (Drag to customize view)</label> <br>
-              <input type="text" id="rev-resp-amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
-            </p>
-
-            <p id="rev-resp-date"></p>
-            <div id="rev-resp-slider-range"></div>
         </div>
         
     </div>
@@ -245,14 +225,9 @@
     <div id="occ-container">
         <h2 class="graph-title">Occ% v Avail</h2>
         
-        <!--Graph div-->
-        <div id="occ-graph">
-            <canvas id="occ-canvas"></canvas>
-        </div>
-
-        <!--Control Panel-->
-        <div id="occ-control-panel">
-
+        <!--Property Filter - Occ% vs Avail% - Dashboard-->
+        <div id="occ-pid-filter">
+            
             <label>Id</label> <br>
             <input type="checkbox" id="occ-all-pid" value="*">
             <label id="occ-all-label" for="occ-all-pid" class="occ-label">(All)</label> <br>
@@ -263,12 +238,25 @@
             <input type="checkbox" id="occ-pid-2" value="2">
             <label id="occ-p2-label" for="occ-pid-2" class="occ-label">2</label> <br>
 
-            <p>
-                <label for="occ-amount">Date (Drag to customize view)</label> <br>
-                <input type="text" id="occ-amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
-            </p>
-            <p id="occ-date"></p>
-            <div id="occ-slider-range"></div>
+        </div>
+
+        <div class="occ__date__filter__title">
+            <span>Filter by Date</span>
+        </div>
+    
+        <div class="occ__dropdown__date">
+            <button class="occ__dropdown__hover"> <span id="occ__dd__hover__span">Last 3 Months (Default)</span> </button>
+            <div class="occ__dropdown__menu">
+                <button class="occ__menu__item" id="occ__menu__item__btn__1" onclick="occAvailAPICall__03()">       <span id="occ__mt__1__span">Last 3 Months</span> </button>
+                <button class="occ__menu__item" id="occ__menu__item__btn__2" onclick="occAvailAPICall__06()">       <span id="occ__mt__2__span">Last 6 Months</span> </button>
+                <button class="occ__menu__item" id="occ__menu__item__btn__3" onclick="occAvailAPICall__ThisYear()"> <span id="occ__mt__3__span">This Year</span>     </button>
+                <button class="occ__menu__item" id="occ__menu__item__btn__4" onclick="occAvailAPICall__2020()">     <span id="occ__mt__4__span">2020</span>          </button>
+            </div>
+        </div>
+
+        <!--Graph div-->
+        <div id="occ-graph">
+            <canvas id="occ-canvas"></canvas>
         </div>
 
     </div>
@@ -291,7 +279,6 @@
     <script src="js/revpar.js"></script>
     <script src="js/occ.js"></script>
     <script src="js/hotel-resp.js"></script>
-    <script src="js/rev-occ-main.js"></script>
-
+    <script src="js/date_filter.js"></script>
 </body>
 </html>
