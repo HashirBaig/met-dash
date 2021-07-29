@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 // For Hotel Resp Graph [2020]
 function revHotelRespAPICall__2020() {
-    fetch('http://localhost:5000/getHotelResp2020')
+    fetch('https://adevu-metric-dashboard.herokuapp.com/getHotelResp2020')
     .then(response => response.json())
     .then(data => loadRevHotelRespData__2020(data));
 }
@@ -324,7 +324,7 @@ function dataLoader_RevResp__2020(rev_score, total_rev, rev_with_resp, resp_bool
 
 // For Hotel Resp Graph [This Year]
 function revHotelRespAPICall__ThisYear() {
-    fetch('http://localhost:5000/getHotelRespThisYear')
+    fetch('https://adevu-metric-dashboard.herokuapp.com/getHotelRespThisYear')
     .then(response => response.json())
     .then(data => loadRevHotelRespData__ThisYear(data));
 }
@@ -634,7 +634,7 @@ function dataLoader_RevResp__ThisYear(rev_score, total_rev, rev_with_resp, resp_
 
 // For Hotel Resp Graph [Last 06 Months]
 function revHotelRespAPICall__06() {
-    fetch('http://localhost:5000/getHotelResp06')
+    fetch('https://adevu-metric-dashboard.herokuapp.com/getHotelResp06')
     .then(response => response.json())
     .then(data => loadRevHotelRespData__06(data));
 }
@@ -940,7 +940,7 @@ function dataLoader_RevResp__06(rev_score, total_rev, rev_with_resp, resp_bool, 
 
 // For Hotel Resp Graph [Last 03 Months]
 function revHotelRespAPICall__03() {
-    fetch('http://localhost:5000/getHotelResp03')
+    fetch('https://adevu-metric-dashboard.herokuapp.com/getHotelResp03')
     .then(response => response.json())
     .then(data => loadRevHotelRespData__03(data));
 }

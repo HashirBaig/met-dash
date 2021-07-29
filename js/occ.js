@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 //For Rev vs Revpar - Dashboard [2020]
 function occAvailAPICall__2020() {
-    fetch('http://localhost:5000/getOccAvail2020')
+    fetch('https://adevu-metric-dashboard.herokuapp.com/getOccAvail2020')
     .then(response => response.json())
     //.then(data => { console.log( (JSON.parse(data)).length ) });
     .then(data => loadOccAvailData__2020(data));
@@ -272,7 +272,7 @@ function dataLoader_Occ__2020(occ, avail, mon, occ_pid_1, avail_pid_1, occ_pid_2
 
 //For Rev vs Revpar - Dashboard [This Year]
 function occAvailAPICall__ThisYear() {
-    fetch('http://localhost:5000/getOccAvailThisYear')
+    fetch('https://adevu-metric-dashboard.herokuapp.com/getOccAvailThisYear')
     .then(response => response.json())
     .then(data => loadOccAvailData__ThisYear(data));
 }
@@ -529,9 +529,8 @@ function dataLoader_Occ__ThisYear(occ, avail, mon, occ_pid_1, avail_pid_1, occ_p
 
 //For Rev vs Revpar - Dashboard [Last 06 Months]
 function occAvailAPICall__06() {
-    fetch('http://localhost:5000/getOccAvail06')
+    fetch('https://adevu-metric-dashboard.herokuapp.com/getOccAvail06')
     .then(response => response.json())
-    //.then(data => { console.log( (JSON.parse(data)).length ) });
     .then(data => loadOccAvailData__06(data));
 }
 //Loading Occupancy% v Availability Data [Last 06 Months]
@@ -784,7 +783,7 @@ function dataLoader_Occ__06(occ, avail, mon, occ_pid_1, avail_pid_1, occ_pid_2, 
 
 //For Rev vs Revpar - Dashboard [Last 03 Months]
 function occAvailAPICall__03() {
-    fetch('http://localhost:5000/getOccAvail03')
+    fetch('https://adevu-metric-dashboard.herokuapp.com/getOccAvail03')
     .then(response => response.json())
     .then(data => loadOccAvailData__03(data));
 }

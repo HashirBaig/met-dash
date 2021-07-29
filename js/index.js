@@ -31,7 +31,7 @@ function cssForMainPage() {
 
 //API Call - Review Score vs Hotel Resp Bool - Main Dashboard [2020]
 function revRespMainAPICall__2020() {
-    fetch('http://localhost:5000/getRCMTnTn')
+    fetch('https://adevu-metric-dashboard.herokuapp.com/getRCMTnTn')
     .then(response => response.json())
     .then(data => loadRevRespMainData__2020(data));
 }
@@ -731,12 +731,9 @@ function dataLoader_RevRespMain__2020(rev_occ_mon, rev_occ_mon_pid_all, rev, rev
 }
 
 
-
-
-
 //API Call - Review Score vs Hotel Resp Bool - Main Dashboard [This Year]
 function revRespMainAPICall__ThisYear() {
-    fetch('http://localhost:5000/getRCMThisYear')
+    fetch('https://adevu-metric-dashboard.herokuapp.com/getRCMThisYear')
     .then(response => response.json())
     .then(data => loadRevRespMainData__ThisYear(data));
 
@@ -1443,7 +1440,7 @@ function dataLoader_RevRespMain__ThisYear(rev_occ_mon, rev_occ_mon_pid_all, rev,
 
 //API Call - Review Score vs Hotel Resp Bool - Main Dashboard [Last 06 Months]
 function revRespMainAPICall__06() {
-    fetch('http://localhost:5000/getRCMLSix')
+    fetch('https://adevu-metric-dashboard.herokuapp.com/getRCMLSix')
     .then(response => response.json())
     .then(data => loadRevRespMainData__06(data));
 
@@ -2018,7 +2015,7 @@ function dataLoader_RevRespMain__06(rev_occ_mon, rev_occ_mon_pid_all, rev, rev_p
 
 //API Call - Review Score vs Hotel Resp Bool - Main Dashboard [Last 03 Months]
 function revRespMainAPICall__03() {
-    fetch('http://localhost:5000/getRevOccRespMain')
+    fetch('https://adevu-metric-dashboard.herokuapp.com/getRevOccRespMain')
     .then(response => response.json())
     .then(data => loadRevRespMainData__03(data));
 }

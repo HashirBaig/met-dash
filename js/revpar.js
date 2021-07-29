@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 //For Rev vs Revpar - Dashboard [2020]
 function revParAPICall__2020() {
-    fetch('http://localhost:5000/getRevPar2020')
+    fetch('https://adevu-metric-dashboard.herokuapp.com/getRevPar2020')
     .then(response => response.json())
     .then(data => loadRevParData__2020(data));
 }
@@ -297,7 +297,7 @@ function dataLoader_Revpar__2020(rev, revpar, adr, mon, rev_pid_1, revpar_pid_1,
 
 //For Rev vs Revpar - Dashboard [This Year]
 function revParAPICall__ThisYear() {
-    fetch('http://localhost:5000/getRevParThisYear')
+    fetch('https://adevu-metric-dashboard.herokuapp.com/getRevParThisYear')
     .then(response => response.json())
     .then(data => loadRevParData__ThisYear(data));
 }
@@ -581,7 +581,7 @@ function dataLoader_Revpar__ThisYear(rev, revpar, adr, mon, rev_pid_1, revpar_pi
 
 //For Rev vs Revpar - Dashboard [Last 06 Months]
 function revParAPICall__06() {
-    fetch('http://localhost:5000/getRevPar06')
+    fetch('https://adevu-metric-dashboard.herokuapp.com/getRevPar06')
     .then(response => response.json())
     .then(data => loadRevParData__06(data));
 }
@@ -861,7 +861,7 @@ function dataLoader_Revpar__06(rev, revpar, adr, mon, rev_pid_1, revpar_pid_1, a
 
 //For Rev vs Revpar - Dashboard [Last 03 Months]
 function revParAPICall__03() {
-    fetch('http://localhost:5000/getRevPar03')
+    fetch('https://adevu-metric-dashboard.herokuapp.com/getRevPar03')
     .then(response => response.json())
     .then(data => loadRevParData__03(data));
 }
