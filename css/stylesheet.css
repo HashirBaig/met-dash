@@ -8,7 +8,6 @@
     font-size: 1.5em;
 }
 /*CSS for metric MAIN dashboard page*/
-
 .revpar__dropdown__date{
     position: relative;
     display: inline-block;
@@ -232,7 +231,7 @@
 }
 .wrapper-metric-stats{
     display: flex;
-    max-height: 12.2em;
+    max-height: 12.8em;
     overflow-x: auto;
     transition: all 0.4s ease;
 }
@@ -254,6 +253,7 @@
 }
 #metric-mom{
     padding-bottom: -0.5em;
+    border-top: solid 4px #042331;
 }
 #metric-mom:hover{
     filter: drop-shadow(00.2em 00.2em 00.3em #a7a7a7);
@@ -496,9 +496,8 @@ label #btn{
     background-color: #fff;
 }
 
-
 /*Media queries here*/
-@media screen and (max-width: 480px){ /*---PORTRAIT MODE---*/
+@media screen and (max-width: 480px) and (orientation: portrait){ /*---PORTRAIT MODE---*/
 
     /*Non Metric Graphs - Rev vs ADR*/
     #revpar-pid-filter{
@@ -579,7 +578,7 @@ label #btn{
     #app_header{
         margin-top: 1.45em;
         margin-left: 4.6em;
-        font-size: 1.2em;
+        font-size: 1.6em;
     }
     label #btn{
         width: 1.47em;
@@ -630,4 +629,95 @@ label #btn{
         display: none;
     }
     
+}
+@media screen and (orientation: landscape){ /*---LANDSCAPE MODE---*/
+    .wrapper-metric-stats{
+        display: flex;
+        max-height: 12.8em;
+        width: 80.0em;
+        overflow-x: auto;
+        transition: all 0.4s ease;
+    }
+    /* Rev, Occ & Hotel Resp Graphs */
+    #rev-occ-pid-filter{
+        display: block;
+        width: 10.0em;
+    }
+    .date__filter__title{
+        width: 10.0em;
+    }
+    #metric-rev-par-graph{
+        margin-top: -10.1em;
+        margin-left: 4.5em;
+        width: 32.0em;
+        transition: all 0.8s ease;
+    }
+    /* Rev vs Rev Resp Graphs */
+    #revpar-pid-filter{
+        display: block;
+        width: 10.0em;
+        margin-left: 63.0em;
+    }
+    .revpar__dropdown__date, .revpar__date__filter__title{
+        width: 10.0em;
+        margin-left: 63.0em;
+    }
+    .graph-title{
+        width: 10.0em;
+        margin-top: 1.0em;
+        margin-left: 16.8em;
+        font-size: 1.6em;
+    }
+    #rev-par-graph{
+        position: relative;
+        margin-top: -10.0em;
+        margin-left: 4.0em;
+        
+        width: 56.0em;
+        height: 28.0em;
+    }
+    /* Rev, Occ & Hotel Resp Graphs */
+    .revresp-graph-title{
+        margin-top: 1.0em;
+        margin-left: 14.7em;
+        font-size: 1.6em;
+        width: 16.0em;
+    }
+    #revresp-pid-filter{
+        display: block;
+        width: 10.0em;
+        margin-left: 63.0em;
+    }
+    .revresp__date__filter__title, .revresp__dropdown__date{
+        display: block;
+        width: 10.0em;
+        margin-left: 63.0em;
+    }
+    #revresp-graph{
+        position: relative;
+        margin-top: -10.0em;
+        margin-left: 4.0em;
+        
+        width: 56.0em;
+        height: 28.0em;
+    }
+
+    /* Occ% & Avail% Graphs */
+    #occ-pid-filter{
+        display: block;
+        width: 10.0em;
+        margin-left: 63.0em;
+    }
+    .occ__dropdown__date, .occ__date__filter__title{
+        width: 10.0em;
+        margin-left: 63.0em;
+    }
+    #occ-graph{
+        position: relative;
+        margin-top: -10.0em;
+        margin-left: 4.0em;
+        
+        width: 56.0em;
+        height: 28.0em;
+    }
 }
