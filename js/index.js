@@ -1435,9 +1435,6 @@ function dataLoader_RevRespMain__ThisYear(rev_occ_mon, rev_occ_mon_pid_all, rev,
 }
 
 
-
-
-
 //API Call - Review Score vs Hotel Resp Bool - Main Dashboard [Last 06 Months]
 function revRespMainAPICall__06() {
     fetch('https://adevu-metric-dashboard.herokuapp.com/getRCMLSix')

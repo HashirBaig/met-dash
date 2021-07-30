@@ -36,6 +36,9 @@ function loadAvailMetricData(data) {
             $('.val-avail').css({
                 'margin-top' : '-23px',
             });
+            $('#metric-avail').css({
+                'border-top': '4px solid darkgray',
+            });
         });
 
     }else{
@@ -61,6 +64,9 @@ function loadAvailMetricData(data) {
                     'border-bottom': '18px solid #7BE15F',
                     'margin-left': '41px',
                 });
+                $('#metric-avail').css({
+                    'border-top': '4px solid #7BE15F',
+                });
             }); 
         }else if (rslt_avail<0){
             
@@ -70,6 +76,7 @@ function loadAvailMetricData(data) {
                 });
                 $('#metric-avail').css({
                     'background-color':'#FFEBE7',
+                    'border-top': '4px solid #FC6847',
                 });
                 $('.triangle-avail').css({
                     'width': '0',
@@ -88,6 +95,9 @@ function loadAvailMetricData(data) {
                 });
                 $('.triangle-avail').css({
                     'display' : 'none',
+                });
+                $('#metric-avail').css({
+                    'border-top': '4px solid darkgray',
                 });
             });
         }
@@ -117,6 +127,9 @@ function loadRatingMetricData(data) {
             });
             $('.val-rating').css({
                 'margin-top' : '-23px',
+            });
+            $('#metric-rating').css({
+                'border-top': '4px solid darkgray',
             });
         });
 
@@ -148,6 +161,9 @@ function loadRatingMetricData(data) {
                     'border-bottom': '18px solid #7BE15F',
                     'margin-left': '41px',
                 });
+                $('#metric-rating').css({
+                    'border-top': '4px solid #7BE15F',
+                });
             }); 
         }else if (rslt_rating<0){
             //p_adr.fontcolor("#FC6847");//#FC6847 - light red
@@ -157,6 +173,7 @@ function loadRatingMetricData(data) {
                 });
                 $('#metric-rating').css({
                     'background-color':'#FFEBE7',
+                    'border-top': '4px solid #FFEBE7',
                 });
                 $('.triangle-rating').css({
                     'width': '0',
@@ -197,6 +214,9 @@ function loadMetricData(data) {
             });
             $('.val-adr').css({
                 'margin-top' : '-23px',
+            });
+            $('#metric-adr').css({
+                'border-top': '4px solid darkgray',
             }); 
         });
 
@@ -211,7 +231,10 @@ function loadMetricData(data) {
             });
             $('.val-revpar').css({
                 'margin-top' : '-23px',
-            }); 
+            });
+            $('#metric-revpar').css({
+                'border-top': '4px solid darkgray',
+            });
         });
 
     }else {
@@ -244,6 +267,9 @@ function loadMetricData(data) {
                     'border-bottom': '18px solid #7BE15F',
                     'margin-left': '41px',
                 });
+                $('#metric-adr').css({
+                    'border-top': '4px solid #7BE15F',
+                });
             }); 
         }else if (rslt_adr<0){
 
@@ -253,6 +279,7 @@ function loadMetricData(data) {
                 });
                 $('#metric-adr').css({
                     'background-color':'#FFEBE7',
+                    'border-top': '4px solid #FC6847',
                 });
                 $('.triangle-adr').css({
                     'width': '0',
@@ -272,6 +299,9 @@ function loadMetricData(data) {
                 $('.triangle-adr').css({
                     'display' : 'none',
                 }); 
+                $('#metric-adr').css({
+                    'border-top': '4px solid darkgray',
+                });
             });
         }
     
@@ -289,6 +319,9 @@ function loadMetricData(data) {
                     'border-bottom': '18px solid #7BE15F',
                     'margin-left': '41px',
                 });
+                $('#metric-revpar').css({
+                    'border-top': '4px solid #7BE15F',
+                });
             }); 
         }else if (rslt_revpar<0){
 
@@ -298,6 +331,7 @@ function loadMetricData(data) {
                 });
                 $('#metric-revpar').css({
                     'background-color':'#FFEBE7',
+                    'border-top': '4px solid #FC6847',
                 });
                 $('.triangle-revpar').css({
                     'width': '0',
@@ -316,6 +350,9 @@ function loadMetricData(data) {
                 });
                 $('.triangle-revpar').css({
                     'display' : 'none',
+                });
+                $('#metric-revpar').css({
+                    'border-top': '4px solid darkgray',
                 });
             });
         }
@@ -346,7 +383,10 @@ function loadOccMetric(data) {
             });
             $('.val-occ').css({
                 'margin-top' : '-23px',
-            }); 
+            });
+            $('#metric-occ').css({
+                'border-top': '4px solid darkgray',
+            });
         });
 
     } else{
@@ -370,6 +410,9 @@ function loadOccMetric(data) {
                     'border-bottom': '18px solid #7BE15F',
                     'margin-left': '41px',
                 });
+                $('#metric-occ').css({
+                    'border-top': '4px solid #7BE15F',
+                });
             }); 
         }else if (rslt_occ<0){
             
@@ -379,6 +422,7 @@ function loadOccMetric(data) {
                 });
                 $('#metric-occ').css({
                     'background-color':'#FFEBE7',
+                    'border-top': '4px solid #FC6847',
                 });
                 $('.triangle-occ').css({
                     'width': '0',
@@ -397,6 +441,9 @@ function loadOccMetric(data) {
                 });
                 $('.triangle-occ').css({
                     'display' : 'none',
+                });
+                $('#metric-occ').css({
+                    'border-top': '4px solid darkgray',
                 });
             });
         }

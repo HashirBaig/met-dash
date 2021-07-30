@@ -8,8 +8,9 @@ $(document).ready( function() {
             //Hiding 'rev-par-container' 
             $('#rev-par-container').hide();
             $('#revpar-pid-filter').hide();
-            $('.revpar__dropdown__date').show();
-            $('.revpar__date__filter__title').show();
+            $('.revpar__dropdown__date').hide();
+            $('.revpar__date__filter__title').hide();
+            
             //Hiding 'rev-resp-container' 
             $('#rev-resp-container').hide();
             $('#revresp-pid-filter').hide();
