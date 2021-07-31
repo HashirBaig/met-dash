@@ -1155,6 +1155,9 @@ function revParVRevGraph(rev, revpar, mon, adr, c) {
         mon_data[i] = mon[i];
     }	
 
+    //Updating Canvas
+    $('#revpar-canvas').remove();
+    $('#rev-par-graph').html('<canvas id="revpar-canvas"></canvas>');
 
     let revParCanvas = document.getElementById('revpar-canvas').getContext('2d');
 
@@ -1256,11 +1259,6 @@ function revParVRevGraph(rev, revpar, mon, adr, c) {
             
         }
     });
-
-    if (c === 1) {
-        //Destroy called
-        revPar_v_Par_Graph.destroy();
-    }
     if (c === 1) {
         //Update called
         revPar_v_Par_Graph.update();

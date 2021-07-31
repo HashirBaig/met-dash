@@ -2676,6 +2676,15 @@ function revHotelRespGraph_Metric(rev_score, mon, resp_bool, c, rev, revpar, adr
         mon_data[i]       = mon[i];
     }
 
+    //Updating Canvas
+    $('#metric-revpar-canvas').remove();
+    $('#occ-metric-canvas').remove();
+    $('#metric-rev-resp-canvas').remove();
+
+    $('#metric-rev-par-graph').html('<canvas id="metric-revpar-canvas" class="metric-graph"></canvas>');
+    $('#metric-occ-graph').html('<canvas id="occ-metric-canvas" class="metric-graph"></canvas>');
+    $('#metric-hotel-resp-graph').html('<canvas id="metric-rev-resp-canvas"></canvas>');
+
     /*Avg. RevPar vs ADR*/
     let revParCanvas_Metric = document.getElementById('metric-revpar-canvas').getContext('2d');
 
@@ -2948,13 +2957,6 @@ function revHotelRespGraph_Metric(rev_score, mon, resp_bool, c, rev, revpar, adr
             
         }
     });
-
-    //Destroying graphs here
-    if (c === 1) {
-        revPar_v_Par_Graph_Metric.destroy();
-        occ_v_Avail_Graph_Metric.destroy();
-        rev_Resp_Graph_Metric.destroy();
-    }
 
     //Updating graphs here
     if (c === 1) {

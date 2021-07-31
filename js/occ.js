@@ -1045,6 +1045,10 @@ function occVAvailGraph(occ, mon, avail, c) {
         adr_data[i] = avail[i];
         mon_data[i] = mon[i];
     }
+
+    //Updating Canvas
+    $('#occ-canvas').remove();
+    $('#occ-graph').html('<canvas id="occ-canvas"></canvas>');
     
     let occCanvas = document.getElementById('occ-canvas').getContext('2d');
 
@@ -1072,7 +1076,6 @@ function occVAvailGraph(occ, mon, avail, c) {
     }
 
     dataset.push(lineDataset);
-
 
     //Occ% vs Avail% Graph here
     occ_v_Avail_Graph = new Chart(occCanvas, {
@@ -1131,9 +1134,6 @@ function occVAvailGraph(occ, mon, avail, c) {
             
         }
     });
-    if (c === 1) {
-        occ_v_Avail_Graph.destroy();
-    }
     if (c === 1) {
         occ_v_Avail_Graph.update();
     }

@@ -1257,6 +1257,10 @@ function revHotelRespGraph(rev_score ,mon, resp_bool, c) {
         mon_data[i] = mon[i];
     }
 
+    //Updating Canvas
+    $('#rev-resp-canvas').remove();
+    $('#revresp-graph').html('<canvas id="rev-resp-canvas"></canvas>');
+
     let revRespCanvas = document.getElementById('rev-resp-canvas').getContext('2d');
 
     var entranceDataset = {
@@ -1347,9 +1351,6 @@ function revHotelRespGraph(rev_score ,mon, resp_bool, c) {
             
         }
     });
-    if (c === 1) {
-        rev_Resp_Graph.destroy();
-    }
     if (c === 1) {
         rev_Resp_Graph.update();
     }
