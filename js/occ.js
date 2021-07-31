@@ -1134,63 +1134,6 @@ function occVAvailGraph(occ, mon, avail, c) {
     if (c === 1) {
         occ_v_Avail_Graph.destroy();
     }
-    //Occ% vs Avail% Graph here
-    occ_v_Avail_Graph = new Chart(occCanvas, {
-        type: 'line',
-        data: {
-            labels: mon_data,
-            datasets: dataset
-        },
-        options: {
-            scales: {
-                yAxes: [{
-                    id:"y-axis-1",
-                    position:'left',
-                    type: 'linear',
-                    ticks: {
-                        beginAtZero:true,
-                    },
-                    scaleLabel: {
-                        display: true,
-                        labelString: 'Avg. Occupancy %',
-                        fontSize: 16,
-                        fontStyle: "bold",
-                    }
-                    }, {
-                        id:"y-axis-2",
-                        position:'right',
-                        type: 'linear',
-                        scaleOverride: true,
-                        scaleSteps: 10,
-                        ticks: {
-                            beginAtZero:true
-                        },
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Avg. Available Rooms',
-                            fontSize: 16,
-                            fontStyle: "bold",
-                        }
-                }],
-                xAxes : [{
-                    ticks: {
-                        display: true
-                    },
-                    barPercentage: 1.1,
-                    gridLines : {
-                        display : false
-                    },
-                    scaleLabel: {
-                        display: true,
-                        labelString: 'Month of Date',
-                        fontSize: 16,
-                        fontStyle: "bold",
-                    }
-                }]
-            },
-            
-        }
-    });
     if (c === 1) {
         occ_v_Avail_Graph.update();
     }

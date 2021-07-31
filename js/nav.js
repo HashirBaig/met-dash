@@ -12,7 +12,7 @@ $(document).ready( function() {
             $('.revpar__date__filter__title').hide();
             
             //Hiding 'rev-resp-container' 
-            $('#rev-resp-container').hide();
+            $('#revresp-container').hide();
             $('#revresp-pid-filter').hide();
             $('.revresp__dropdown__date').hide();
             $('.revresp__date__filter__title').hide();
@@ -41,7 +41,7 @@ $(document).ready( function() {
             $('.revpar__dropdown__date').show();
             $('.revpar__date__filter__title').show();
             //Hiding 'rev-resp-container' 
-            $('#rev-resp-container').hide();
+            $('#revresp-container').hide();
             $('#revresp-pid-filter').hide();
             $('.revresp__dropdown__date').hide();
             $('.revresp__date__filter__title').hide();

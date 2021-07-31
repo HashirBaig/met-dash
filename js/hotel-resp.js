@@ -1350,69 +1350,6 @@ function revHotelRespGraph(rev_score ,mon, resp_bool, c) {
     if (c === 1) {
         rev_Resp_Graph.destroy();
     }
-    //Hotel Response Bool Graph here
-    rev_Resp_Graph = new Chart(revRespCanvas, {
-        type: 'line',
-        data: {
-            labels: mon_data,
-            datasets: dataset
-        },
-        options: {
-            scales: {
-                yAxes: [{
-                    id:"y-axis-1",
-                    position:'left',
-                    type: 'linear',
-                    ticks: {
-                        beginAtZero:true,
-                        max: 10
-                    },
-                    scaleLabel: {
-                        display: true,
-                        labelString: 'Avg. Review Score',
-                        fontStyle: "bold",
-                        fontSize: 16,
-                    }
-                    }, {
-                        id:"y-axis-2",
-                        position:'right',
-                        type: 'linear',
-                        scaleOverride: true,
-                        scaleSteps: 10,
-                        ticks: {
-                            beginAtZero:true,
-                            max: 100,
-                            callback: function(label, index, labels){
-                                return label+'.00%';
-                            },
-                        },
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Avg. Hotel Response Bool',
-                            fontStyle: "bold",
-                            fontSize: 16,
-                        }
-                }],
-                xAxes : [{
-                    ticks: {
-                        display: true,
-                    },
-                    barPercentage: 1.1,
-                    gridLines : {
-                        display : false
-                    },
-                    scaleLabel: {
-                        display: true,
-                        labelString: 'Month of Date',
-                        fontStyle: "bold",
-                        fontSize: 16,
-                    }
-                }]
-            },
-            
-        }
-    });
-
     if (c === 1) {
         rev_Resp_Graph.update();
     }
